@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App </title>
+<!-- Bootstrap Core CSS -->
+<link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="../assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header class="navbar navbar-default"> 
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header fixed-brand tgl">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle"> <span class="hamb-menu"><i class="hamb-icon"></i></span> </button>
+    <a class="navbar-brand" href="javascript:;">QAS</a> </div>
+  <!-- navbar-header-->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                         <button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> 
+                           <span class="hamb-menu" ><i class="hamb-icon"></i></span>
+                         </button>
+                        </li>
+                    </ul>                    
+                    <ul class="nav navbar-nav navbar-right hidden-xs right-nav"> 
+                      <li><a class="display-name">John Doe | Hospital </a></li>
+                      <li class="dropdown">
+                         <a href="javascript:;" class="user-icons dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle-o"></i><span class="caret"></span></a>
+                         <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="">Policy & Procedures</a></li> 
+                          <li><a href="">User Manual</a></li>                        
+                          <li><a href="">Request for Support</a></li>
+                        </ul>
+                      </li>                      
+                      <li class="dropdown">                       
+                        <a href="javascript:;" class="dropdown-toggle user-icons" data-toggle="dropdown"><i class="fa fa-user-circle-o" ></i> 
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="../notification/notificationPreferences.html">Notification Preferences</a></li> 
+                          <li><a href="" data-toggle="modal" data-target="#changePassword">Change Password</a></li>                        
+                          <li><a href="../login/login.html">Logout</a></li>
+                        </ul>
+                      </li>               
+                    </ul>                    
+                </div>
+  <!-- /#navbar-header --> 
+</header>
+<div id="wrapper" class="toggled-2"> 
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+       <li><a href="../dashboard/dashboard.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-desktop"></i></span>Dashboard</a></li>
+        <li><a href="../incidentReporting/incidentReporting.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-pencil-square-o" ></i></span>Incident Reporting</a>                </li>
+        <li class="active"><a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o" ></i></span>Search Incident Report</a></li>
+        <li><a href="../searchCategory/searchCategory.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sliders" ></i></span>Search Category</a></li>
+        <li><a href="../searchSubCategory/searchSubCategory.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-files-o" ></i></span>Search Sub Category</a></li>           
+      <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-circle-o"></i></span>Profile</a> </li>
+      <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sign-out"></i></span>Logout</a> </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper --> 
+  <!-- Page Content -->
+  <div id="page-content-wrapper" class="animated fadeIn">    
+    <div> 
+      <!-- external page content-->
+      <div id="pageLoad">
+        <div class="search">
+        <h4 class="title">Search Incident Report <span id="collapseBtn" class="pull-right">Search Filters <i class="fa fa-angle-up"></i></span></h4>
+        <div class="inner-wrapper search-collapse mar-top-sm">
+          <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>Fall</option>
+              </select>
+              <label class="control-label"> Category</label>
+              <span class="input-bar"></span>              
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>Fall From Bed</option>
+              </select>
+              <label class="control-label"> Sub Category</label>
+              <span class="input-bar"></span> 
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>Active</option>
+              </select>
+              <label class="control-label"> Status</label>
+              <span class="input-bar"></span> 
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>Royal Hospital</option>
+              </select>
+              <label class="control-label"> Institution</label>
+              <span class="input-bar"></span> 
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>General Surgery</option>
+              </select>
+              <label class="control-label"> Department</label>
+              <span class="input-bar"></span> 
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>Toilet</option>
+              </select>
+              <label class="control-label"> Location</label>
+              <span class="input-bar"></span> 
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>Critical</option>
+              </select>
+              <label class="control-label"> Severity</label>
+              <span class="input-bar"></span> 
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="ui-input-group">
+                  <select class="form-control">
+                    <option disabled="" selected="">01</option>
+                  </select>
+                  <label class="control-label"> Patient Id</label>
+                  <span class="input-bar"></span> 
+                  </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="ui-input-group">
+                  <input type="text" required class="form-control">
+                  <span class="input-bar"></span> 
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="ui-input-group">
+                  <input type="text" required class="form-control">
+                  <span class="input-bar"></span>
+                  <label>Incident#</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="ui-input-group">
+                  <select class="form-control">                    
+                    <option>Surgery</option>
+                  </select>
+                  <label class="control-label"> Type</label>
+                  <span class="input-bar"></span> 
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="ui-input-group">
+                  <input type="text" required class="form-control">
+                  <span class="input-bar"></span>
+                  <label>Date From</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="ui-input-group">
+                  <input type="text" required class="form-control">
+                  <span class="input-bar"></span>
+                  <label>Date To</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="ui-input-group">
+                  <select class="form-control">                    
+                    <option>24hrs</option>
+                  </select>
+                  <label class="control-label"> Reported Within</label>
+                  <span class="input-bar"></span> 
+                  </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="form-inputs mar-top ">
+                  <input type="checkbox" id="sentinal">
+                  <label for="sentinal">Sentinal</label>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="col-md-4 col-sm-6 btn-container">            
+             <button class="btn btn-primary ripple" id="seachIncident">Search</button>
+             <button class="btn btn-primary ripple">Clear</button>
+          </div> 
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <div class="inner-wrapper mar-top-sm animated fadeIn"> 
+       <div class="row">
+         <div class="col-md-3 col-sm-3">
+           <div class="list-group search-list"> 
+               <a href="searchListContent/page.html" class="list-group-item active"> 
+                 <p><i class="severity fa fa-exclamation-triangle insignificant" title="insignificant"></i> <i class="read fa fa-envelope-open-o" title="unread"></i> <b>2486</b> | <span>Clinical Incidents</span></p> 
+                 <p><span>Medication Error-Drug Should Have been Avoided</span> | <span>Known Allergy</span></p> 
+                 <p><span>VIP & Spl. Nursing</span> | <span><i class="fa fa-map-marker"></i> ACC & EMER PAED</span></p>
+                 <p><i class="fa fa-clock-o"></i> 6/22/2017, 9:23:17 AM  </p>
+                 <ul class="status-steps text-top">
+                    <li class="finished"><span><em>New</em></span></li>
+                    <li class="finished"><span><em>Open</em></span></li>
+                    <li class="finished"><span><em>RCA</em></span></li>
+                    <li class="finished"><span><em>Action Plan</em></span></li>
+                    <li><span><em>Closed</em></span></li>
+                    <li><span><em>Safety Alert</em></span></li>
+                </ul>
+               </a> 
+               <a href="searchListContent/page.html" class="list-group-item"> 
+                 <p><i class="severity fa fa-exclamation-triangle minor" title="minor"></i> <i class="read fa fa-envelope-o" title="read"></i> <b>8541</b> | Non Clinical Incidents</p>
+                 <p><span>Error Related to Respiratory Care</span> | <span>Self / unplanned extubation</span></p> 
+                 <p><span>RHEUMATOLOGY</span> | <span><i class="fa fa-map-marker"></i> ADMINISTRATION</span></p>
+                 <p><i class="fa fa-clock-o"></i> 6/22/2017, 9:23:17 AM  </p>
+                 <ul class="status-steps text-top">
+                    <li class=""><span><em>New</em></span></li>
+                    <li class=""><span><em>Open</em></span></li>
+                    <li class="finished"><span><em>RCA</em></span></li>
+                    <li class="finished"><span><em>Action Plan</em></span></li>
+                    <li><span><em>Closed</em></span></li>
+                    <li><span><em>Safety Alert</em></span></li>
+                </ul>
+               </a> 
+               <a href="searchListContent/page.html" class="list-group-item"> 
+                 <p><i class="severity fa fa-exclamation-triangle moderate" title="moderate"></i> <i class="read fa fa-envelope-o" title="unread"></i> <b>5472</b> | Surgery</p>  
+                 <p><span>Fall</span>| Fall from bed</p> 
+                 <p><span>PAEDIATRIC SURGERY</span> | <span><i class="fa fa-map-marker"></i> P.T.CLINIC</span></p>
+                 <p><i class="fa fa-clock-o"></i> 6/22/2017, 9:23:17 AM  </p>   
+                 <ul class="status-steps text-top">
+                    <li class=""><span><em>New</em></span></li>
+                    <li class=""><span><em>Open</em></span></li>
+                    <li class=""><span><em>RCA</em></span></li>
+                    <li><span><em>Action Plan</em></span></li>
+                    <li class="finished"><span><em>Closed</em></span></li>
+                    <li class="finished"><span><em>Safety Alert</em></span></li>
+                </ul>           
+               </a>  
+                <a href="searchListContent/page.html" class="list-group-item"> 
+                 <p><i class="severity fa fa-exclamation-triangle major" title="major"></i> <i class="read fa fa-envelope-o" title="unread"></i> <b>8541</b> | Non Clinical Incidents</p>
+                 <p><span>Error Related to Respiratory Care</span> | <span>Self / unplanned extubation</span></p> 
+                 <p><span>RHEUMATOLOGY</span> | <span><i class="fa fa-map-marker"></i> ADMINISTRATION</span></p>
+                 <p><i class="fa fa-clock-o"></i> 6/22/2017, 9:23:17 AM  </p>
+                 <ul class="status-steps text-top">
+                    <li class="finished"><span><em>New</em></span></li>
+                    <li class=""><span><em>Open</em></span></li>
+                    <li class="finished"><span><em>RCA</em></span></li>
+                    <li class="finished"><span><em>Action Plan</em></span></li>
+                    <li><span><em>Closed</em></span></li>
+                    <li class="finished"><span><em>Safety Alert</em></span></li>
+                </ul>
+               </a>              
+           </div>
+           <div>
+             <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+           </div>
+         </div>
+         <div class="col-md-9 col-sm-9">
+           <div class="search-details">
+              <div class="search-content">
+                 
+                 <div class="alert alert-success fix-top" >    
+    <strong>Success!</strong> You have saved successfully .
+</div>
+
+<nav id="lftMenu">
+<ul>
+    <li><a href="#reportingType"><i class="fa fa-check-circle-o"></i><span class="tooltiptext right">General Info</span></a></li>
+    <li><a href="#incidentDetails"><i class="fa fa-file-text-o"></i><span class="tooltiptext right">Incident Details</span></a></li>
+    <li><a href="#contributoryFactors"><i class="fa fa-puzzle-piece"></i><span class="tooltiptext right">Contributory Factors</span></a></li>
+    <li><a href="#attachments"><i class="fa fa-paperclip"></i><span class="tooltiptext right">Attachments</span></a></li>
+    <li><a href="#comments"><i class="fa fa-commenting-o"></i><span class="tooltiptext right">Comments</span></a></li>
+    <li><a href="#riskAsssessment"><i class="fa fa-spinner"></i><span class="tooltiptext right">Risk Assessment</span></a></li>
+    <li><a href="#Conclusion"><i class="fa fa-hourglass-end"></i><span class="tooltiptext right">Conclusion</span></a></li>
+</ul>
+</nav>
+<div class="top-details"><span class="patient-id">2486</span><span class="status active">Active</span></div>
+<div class="inner-wrapper btm-mar">
+               <div class="row">
+                     <div class="col-md-3 col-sm-3 col-xs-6">
+                          <div class="form-inputs">    
+                              <input type="radio" id="Cinical" name="01">
+                              <label for="Cinical">General Incident </label>  
+                               <span class="theme-tooltip">
+                                   <i class="fa fa-question-circle info-icon"></i>   
+                                    <span class="theme-tooltip-box right">An adverse event or occurrences that may cause an interruption in patient or staff safety or physical facility or routine health care operation. </span>
+                                </span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-6">
+                          <div class="form-inputs">    
+                              <input type="radio" id="Sentinel" name="01">
+                              <label for="Sentinel">Sentinel</label>                            
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-6">
+                          <div class="form-inputs">    
+                              <input type="radio" id="NearMiss" name="01">
+                              <label for="NearMiss">Near Miss</label>                            
+                          </div>
+                      </div>                      
+                   </div>
+             </div>
+             <div class="inner-wrapper">
+               <div class="row btm-mar">
+                     <div class="col-md-4 col-sm-4">
+                         <div class="ui-input-group btm-space">        
+                            <select class="form-control" id="incidentCategorySelect">
+                               <option>Accident</option>
+                                <option>Behavior </option>
+                                <option>Clinical Administration</option>
+                                <option>Clinical Process/ Procedure</option>
+                                <option>Documentation</option>
+                                <option>Facility Security </option>
+                                <option>Healthcare Associated Infection</option>
+                                <option>Medical Device/ Equipment</option>
+                                <option>Medication / IV Fluids</option>
+                                <option>Resources/Organizational Management</option>                               
+                            </select>
+                            <label class="control-label"> Category</label>
+                            <span class="input-bar"></span>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                       <div class="ui-input-group btm-space">        
+                            <select class="form-control">
+                               <option>Equipment damaged</option>
+							<option>No supplies</option>
+                               <option>Supplies damaged</option>
+                               <option>Supplies expired</option>
+                               <option>Supplies shortage</option>
+                               <option>Supplies was requested but not received</option>
+                            </select>
+                            <label class="control-label"> Sub Category</label>
+                            <span class="input-bar"></span> 
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                       <div class="ui-input-group btm-space">        
+                            <select class="form-control">
+                                <option>Critical</option>
+                               <option>High</option>
+                               <option>Medium</option>
+                               <option>Low</option>
+                            </select>
+                            <label class="control-label"> Severity</label>
+                            <span class="input-bar"></span> 
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-sm-4">
+                              <div class="form-inputs">    
+                                  <input type="radio" id="hideMeALways" name="02">
+                                  <label for="hideMeALways">Hide Me Always</label>                            
+                              </div>
+                      </div>
+                      <div class="col-md-2 col-sm-4">
+                         <div class="form-inputs">    
+                              <input type="radio" id="hideMe" name="02">
+                              <label for="hideMe">Hide Me</label>                            
+                          </div>
+                      </div>
+                      <div class="col-md-2 col-sm-4">
+                         <div class="form-inputs">    
+                                  <input type="radio" id="showMe" name="02">
+                                  <label for="showMe">Show Me</label>                            
+                          </div>
+                      </div>  
+                   </div>
+                   <div class="row">
+                     <div class="col-md-6 col-sm-6">
+                        <div class="block search-add-list">
+                           <h6>Person Affected <button class="icon-btn pull-right addNewBtn" title="Add New"  data-toggle="modal" data-target="#addNewPerson" id="personAffectedBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button></h6>
+                           <div class="mar-10">
+                             <div class="row">
+                              <div class="col-md-4">
+                               <div class="ui-input-group">  
+                                <select class="select-sm form-control staffPatient">
+                                 <option value="staff">Staff</option>
+                                 <option value="patient">Patient</option>
+                                 <option value="other">Other</option>
+                                </select>
+                                <span class="input-bar"></span>   
+                                </div>
+                              </div>                              
+                              <div class="col-md-8 type-name">
+                                  <div class="ui-input-group">        
+                                    <input type="text" required class="form-control search" >  
+                                    <span class="input-bar"></span>                        
+                                    <label class="nameId" >Type Person Name</label>
+                                  </div>
+                              </div>
+                              <div class="col-md-8 ui-input-group other-content">
+                                  <div class="visitor-entry">
+                                       <div class="ui-input-group">        
+                                        <input type="text" required="" class="form-control" placeholder="Name" id="visitorName">  
+                                        <span class="input-bar"></span>                             
+                                       </div>
+                                       <div class="ui-input-group">        
+                                        <input type="text" required="" class="form-control" placeholder="Mobile" id="visitorMob">  
+                                        <span class="input-bar"></span>                             
+                                       </div>  <div class="ui-input-group">        
+                                        <input type="text" required="" class="form-control" placeholder="Remark" id="visitorRemark">  
+                                        <span class="input-bar"></span>                             
+                                       </div>
+                                       <div class="add-btn-cont">
+                                         <button class="icon-btn" id="addVisitor" title="Add"><i class="fa fa-plus-circle"></i></button>
+                                       </div>                               
+                                   </div>
+                              </div>
+                             </div>
+                           </div>
+                          <div class="results"></div>
+                          <ul class="addList searchList"></ul>
+                         <!-- <ul class="addList visitor-list" ></ul>-->
+                         </div>                      
+                      </div> 
+                      <div class="col-md-6 col-sm-6">
+                        <div class="block search-add-list">
+                           <h6>Person Involved <button class="icon-btn pull-right addNewBtn" title="Add New"  data-toggle="modal" data-target="#addNewPerson" id="personInvolvedBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button></h6>
+                           <div class="mar-10">
+                             <div class="row">
+                              <div class="col-md-4">
+                               <div class="ui-input-group">  
+                                <select class="select-sm form-control staffPatient">
+                                 <option value="staff">Staff</option>
+                                 <option value="patient">Patient</option>
+                                 <option value="other">Other</option>
+                                </select>
+                                <span class="input-bar"></span>   
+                                </div>
+                              </div>
+                              <div class="col-md-8 type-name">
+                                  <div class="ui-input-group">        
+                                    <input type="text" required class="form-control search" >  
+                                    <span class="input-bar"></span>                        
+                                    <label class="nameId" >Type Person Name</label>
+                                  </div>
+                              </div>
+                              <div class="col-md-8 ui-input-group other-content">
+                                  <div class="visitor-entry">
+                                   <div class="ui-input-group">        
+                                    <input type="text" required="" class="form-control" placeholder="Name" id="visitorName">  
+                                    <span class="input-bar"></span>                             
+                                   </div>
+                                   <div class="ui-input-group">        
+                                    <input type="text" required="" class="form-control" placeholder="Mobile" id="visitorMob">  
+                                    <span class="input-bar"></span>                             
+                                   </div>  <div class="ui-input-group">        
+                                    <input type="text" required="" class="form-control" placeholder="Remark" id="visitorRemark">  
+                                    <span class="input-bar"></span>                             
+                                   </div>
+                                   <div class="add-btn-cont">
+                                     <button class="icon-btn" id="addVisitor" title="Add"><i class="fa fa-plus-circle"></i></button>
+                                   </div>                               
+                               </div>
+                              </div>
+                             </div>
+                           </div>
+                          <div class="results"></div>
+                          <ul class="addList searchList"></ul>
+                          <!--<ul class="addList visitor-list"></ul>-->
+                         </div>                      
+                      </div>
+       
+             </div>
+             <div class="grid-wrapper">           
+                <div>
+                  
+                                  
+                   <div class="row">
+                      <h5 class="sub-head" id="incidentDetails">Incident Details</h5>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group ">        
+                            <select class="form-control">
+                               <option>General Surgery</option>
+                            </select>
+                            <label class="control-label">Department</label>
+                            <span class="input-bar"></span>                                                       
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <input type="text" required class="form-control">
+                            <span class="input-bar"></span>
+                            <label>Incident Time</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <select class="form-control">
+                               <option>ACC & EMER ADULT</option>
+                               <option>ACC & EMER PAED</option>
+                               <option>P.T.CLINIC</option>
+                               <option>ADMINISTRATION</option>
+                            </select>
+                            <label class="control-label">Location</label>
+                            <span class="input-bar"></span>                            
+                        </div>
+                      </div>                      
+                                                              
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <textarea required class="form-control" cols="5" rows="9"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Immediate Action Taken</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <textarea required class="form-control" cols="5" rows="9"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Incident Decription</label>
+                        </div>
+                      </div> 
+                      <div class="col-md-4 col-sm-4">
+                         <div class="block" id="participants">
+                           <h6>Participants
+                           <button class="icon-btn pull-right addNewBtn" title="Add New" data-toggle="modal" data-target="#addParticipant" id="addParticipantBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button> 
+                           </h6>
+                           <ul class="list participantListView">
+                              <li>John Doe 1 &lt;Medical Officer In Charge&gt; 
+                                 <div class="action-btns">
+                                      <label for="C01" title="Must Reply"><input type="checkbox" id="C01"><span class="fa fa-reply"></span></label>
+                                      <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+                                      <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+                                  </div>
+                               </li>
+                              <li>John Doe 2 &lt;Medical Orderly&gt; 
+                                  <div class="action-btns">
+                                      <label for="C01" title="Must Reply"><input type="checkbox" id="C01"><span class="fa fa-reply"></span></label>
+                                      <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+                                      <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+                                  </div>
+                               </li>
+                              <li>John Doe 2 &lt;Head of Health Center&gt; 
+                                  <div class="action-btns">
+                                      <label for="C01" title="Must Reply"><input type="checkbox" id="C01"><span class="fa fa-reply"></span></label>
+                                      <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+                                      <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+                                  </div>
+                               </li>
+                              <li>John Doe 3 &lt;Medical Record&gt; 
+                                  <div class="action-btns">
+                                      <label for="C01" title="Must Reply"><input type="checkbox" id="C01"><span class="fa fa-reply"></span></label>
+                                      <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+                                      <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+                                  </div>
+                               </li>
+                              <li>John Doe 4 &lt;Medical Orderly&gt; 
+                                  <div class="action-btns">
+                                      <label for="C01" title="Must Reply"><input type="checkbox" id="C01"><span class="fa fa-reply"></span></label>
+                                      <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+                                      <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+                                  </div>
+                               </li>
+                           </ul>
+                         </div>
+                      </div>                                                                          
+                   </div>
+                   <div class="row">
+                     <div class="col-md-4 col-sm-4">
+                        <div class="ui-input-group">        
+                            <select class="form-control">
+                               <option>OPD</option>
+                               <option>IPD</option>
+                               <option>DAY CARE</option>
+                               <option>EMERGENCY</option>
+                            </select>
+                            <label class="control-label">Visit Type</label>
+                            <span class="input-bar"></span>                            
+                        </div>
+                      </div> 
+                         <div class="col-md-4 col-sm-4">
+                          <form>
+                             <div class="ui-input-group">        
+                                <input type="text" class="form-control clear-input" required>
+                                <button class="close-icon" type="reset"></button>
+                                <span class="input-bar"></span>
+                                <label>Equipment Id</label>
+                             </div>
+                             </form>                          
+                             </div>                        
+                         <div class="col-md-4 col-sm-4">                         
+                             <form>
+                             <div class="ui-input-group">        
+                                <input type="text" class="form-control clear-input" required>
+                                <button class="close-icon" type="reset"></button>
+                                <span class="input-bar"></span>
+                                <label>Workorder Id</label>
+                             </div>
+                             </form>
+                             </div>
+                   </div>                    
+                </div>
+             </div>
+             <!-- Contributory Factors -->
+             <div class="inner-wrapper btm-mar">
+               <div class="row">
+                 <h5 class="sub-head" id="contributoryFactors">Contributory Factors</h5>
+                 <div class="col-md-12">
+                    <div class="pull-right expand-panel"> 
+                        <a id="expandAll" href="javasritpt:void;"  role="button">Expand All</a>
+                    </div>
+                </div>
+                 <div class="col-md-12">
+                   <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#collapseOne">
+                                 <h4 class="panel-title"> Patient Factors</h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                <div class="row">
+                                  <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Physical Factors</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox11"><label for="checkbox11">Poor general physical state </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox12"><label for="checkbox12">Malnourished</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox13"><label for="checkbox13">Dehydrated</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox14"><label for="checkbox14">Obese</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox15"><label for="checkbox15">Poor sleep pattern</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox16"><label for="checkbox16">Poor general physical state </label></div></li>
+                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Social Factors</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox21"><label for="checkbox21">Cultural / religious beliefs  </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox22"><label for="checkbox22">Language</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox23"><label for="checkbox23">Lifestyle (smoking/ drinking/ drugs/diet)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox24"><label for="checkbox24">Sub-standard living accommodation (e.g. dilapidated)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox25"><label for="checkbox25">Life events</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox26"><label for="checkbox26">Lack of support networks / (social protective factors -Mental Health Services)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox27"><label for="checkbox27">Engaging in high risk activity)</label></div></li>
+                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Mental/Psychological Factors</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox31"><label for="checkbox31">Motivation issue </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox32"><label for="checkbox32">Stress / Trauma</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox33"><label for="checkbox33">Existing mental health disorder</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox34"><label for="checkbox34">Lack of intent (Mental Health Services)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox35"><label for="checkbox35">Lack of mental capacity</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox36"><label for="checkbox36">Learning Disability </label></div></li>
+                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Interpersonal relationships</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox41"><label for="checkbox41">Staff to patient and patient to staff </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox42"><label for="checkbox42">Patient engagement with services</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox43"><label for="checkbox43">Staff to family and family to staff</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox44"><label for="checkbox44">Patient to patient</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox45"><label for="checkbox45">Family to patient or patient to family</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox46"><label for="checkbox46">Family to family (Siblings, parents, children) </label></div></li>
+                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Behaviour</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox51"><label for="checkbox51">Distraction/inattention </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox52"><label for="checkbox52">Forgetfulness</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox53"><label for="checkbox53">Absentmindedness</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox54"><label for="checkbox54">Over attention</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox55"><label for="checkbox55">Out of sight, out of mind</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox56"><label for="checkbox56">Overconfidence </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox57"><label for="checkbox57">Noncompliance</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox58"><label for="checkbox58">Routine violence</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox59"><label for="checkbox59">Risky behavior </label></div></li>
+                                        <li><div class="form-inputs"><input type="checkbox" id="checkbox50"><label for="checkbox50">Sabotage/criminal act</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox511"><label for="checkbox511">Fatigue/exhaustion</label></div></li>
+                                       
+                                   </ul>
+                                 </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#collapseTwo">
+                                 <h4 class="panel-title">Staff Factors</h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse ">
+                                <div class="panel-body">
+                                  <div class="row">                                    
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Physical issues</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox61"><label for="checkbox61">Poor general health (e.g. nutrition, hydration, diet, exercise, fitness) </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox62"><label for="checkbox62">Disability (e.g. eyesight problems, dyslexia)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox63"><label for="checkbox63">Fatigue</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox64"><label for="checkbox64">Infected Healthcare worker</label></div></li>         
+                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel min-ht-160 col-md-6 col-sm-6">
+                                   <h6>Psychological Issues</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox71"><label for="checkbox71">Stress (e.g. distraction / preoccupation)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox72"><label for="checkbox72">Specific mental illness (e.g. depression)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox73"><label for="checkbox73">Mental impairment (e.g. illness, drugs, alcohol, pain)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox74"><label for="checkbox74">Lack of motivation (e.g. boredom, complacency, low job satisfaction)</label></div></li>                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Social Domestic</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox81"><label for="checkbox81">PDomestic problems (e.g. family related issues)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox82"><label for="checkbox82">Lifestyle problems (e.g. financial/housing issues)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox83"><label for="checkbox83">Cultural beliefs</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox84"><label for="checkbox84">Language</label></div></li>                                      
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel min-ht-160 col-md-6 col-sm-6">
+                                   <h6>Personality Issues</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox91"><label for="checkbox91">Low self confidence / over confidence (e.g. Gregarious, reclusive, interactive)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox92"><label for="checkbox92">Risk averse / risk taker</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox93"><label for="checkbox93">Bogus Healthcare worker</label></div></li>                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Cognitive factors</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox111"><label for="checkbox111">Preoccupation / narrowed focus (Situational awareness problems)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox112"><label for="checkbox112">Perception/viewpoint affected by info. or mindset (Expectation/Confirmation bias)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox113"><label for="checkbox113">Inadequate decision/action caused by Group influence</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox114"><label for="checkbox114">Distraction / Attention deficit</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox115"><label for="checkbox115">Overload</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox116"><label for="checkbox116">Boredom</label></div></li>
+                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Behaviour</h6>
+                                    <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox121"><label for="checkbox121">Distraction/inattention</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox122"><label for="checkbox122">Forgetfulness</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox123"><label for="checkbox123">Absentmindedness</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox124"><label for="checkbox124">Over attention</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox125"><label for="checkbox125">Out of sight, out of mind</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox126"><label for="checkbox126">Overconfidence</label></div></li>
+                                       
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox127"><label for="checkbox127">Noncompliance</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox128"><label for="checkbox128">Routine violence</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox129"><label for="checkbox129">Risky behavior</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox1201"><label for="checkbox1201">Sabotage/criminal act</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox1202"><label for="checkbox1202">Fatigue/exhaustion</label></div></li>
+                                   </ul>
+                                 </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#collapseThree">
+                                 <h4 class="panel-title"> Task Factors</h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body">
+                                  <div class="row">
+                                   <div class="sub-panel min-ht-280 col-md-6 col-sm-6">
+                                   <h6>Guidelines, Policies and Procedures</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox131"><label for="checkbox131">Not up-to-date</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox132"><label for="checkbox132">Unavailable at appropriate location (e.g. Lost/missing/non-existent/not accessible when needed)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox133"><label for="checkbox133">Unclear/not useable (Ambiguous; complex; irrelevant, incorrect)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox134"><label for="checkbox134">Not adhered to / not followed </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox135"><label for="checkbox135">Not monitored / reviewed</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox136"><label for="checkbox136">Inappropriately targeted/focused (i.e. not aimed at right audience)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox137"><label for="checkbox137">Inadequate task disaster plans and drills</label></div></li>
+                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel min-ht-280 col-md-6 col-sm-6">
+                                   <h6>Decision making aids</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox141"><label for="checkbox141">Aids not available (e.g. CTG machine; checklist; risk assessment tool; fax machine to enable remote assessment of results)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox142"><label for="checkbox142">Aids not working (e.g. CTG machine, risk assessment tool, fax machine)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox143"><label for="checkbox143">Difficulties in accessing senior / specialist advice )</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox144"><label for="checkbox144">Lack of easy access to technical information, flow charts and diagrams </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox145"><label for="checkbox145">Lack of prioritisation of guidelines</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox146"><label for="checkbox146">Incomplete information (test results, patient history)</label></div></li>                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Procedural or Task Design</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox151"><label for="checkbox151">Poorly designed (i.e. Too complex; too much info.; difficult to conceive or remember)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox152"><label for="checkbox152">Guidelines do not enable one to carry out the task in a timely manner</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox153"><label for="checkbox153">Too many tasks to perform at the same time</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox154"><label for="checkbox154">Contradicting tasks </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox155"><label for="checkbox155">Staff do not agree with the ‘task/procedure design’</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox156"><label for="checkbox156">Stages of the task not designed so that each step can realistically be carried out</label></div></li>   
+                                       
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox157"><label for="checkbox157">Lack of direct or understandable feedback from the task</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox158"><label for="checkbox158">Misrepresentation of information</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox159"><label for="checkbox159">Inappropriate transfer of processes from other situations</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox150"><label for="checkbox150">Inadequate Audit, Quality control, Quality Assurance built into the task design</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox1511"><label for="checkbox1511">Insufficient opportunity to influence task/outcome where necessary</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox1512"><label for="checkbox1512">Appropriate automation not available</label></div></li>                                      
+                                   </ul>
+                                 </div>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#collapseFour">
+                                 <h4 class="panel-title"> Communication</h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body">
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Verbal communication </h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox161"><label for="checkbox161">Inappropriate tone of voice and style of delivery for situation  </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox162"><label for="checkbox162">Ambiguous verbal commands / directions</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox163"><label for="checkbox163">Incorrect use of language</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox164"><label for="checkbox164">Made to inappropriate person(s)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox165"><label for="checkbox165">Incorrect communication channels used.</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox166"><label for="checkbox166">Language difficulty.</label></div></li>                 
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Written communication</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox171"><label for="checkbox171">Inadequate patient identification </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox172"><label for="checkbox172">Records difficult to read</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox173"><label for="checkbox173">All relevant records not stored together and accessible when required</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox174"><label for="checkbox174">Records incomplete or not contemporaneous (e.g. unavailability of patient management plans, patient risk assessments, etc)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox175"><label for="checkbox175">Written information not circulated to all team members</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox176"><label for="checkbox176">Communication not received</label></div></li>
+                                        <li><div class="form-inputs"><input type="checkbox" id="checkbox177"><label for="checkbox177">Communications directed to the wrong people</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox178"><label for="checkbox178">Lack of information to patients</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox179"><label for="checkbox179">Lack of effective communication to staff of risks (Alerts systems etc)</label></div></li>
+                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Non verbal communication</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox180"><label for="checkbox180">Body Language issues (closed, open, body movement, gestures, facial expression)</label></div></li>                                       
+                                   </ul>
+                                 </div>
+                                 <div class="sub-panel col-md-6 col-sm-6">
+                                   <h6>Communication Management</h6>
+                                   <ul>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox181"><label for="checkbox181">Communication strategy and policy not defined / documented </label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox182"><label for="checkbox182">Ineffective involvement of patient/carer in treatment and decisions</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox183"><label for="checkbox183">Lack of effective communication to patients/relatives/carers of risks</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox184"><label for="checkbox184">Lack of effective communication to patients about incidents (being open)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox185"><label for="checkbox185">Information from patient/carer disregarded</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox186"><label for="checkbox186">Ineffective communication flow to staff up, down and across</label></div></li>
+                                        <li><div class="form-inputs"><input type="checkbox" id="checkbox187"><label for="checkbox187">Ineffective interface for communicating with other agencies (partnership working)</label></div></li>
+                                       <li><div class="form-inputs"><input type="checkbox" id="checkbox188"><label for="checkbox188">Lack of measures for monitoring communication</label></div></li>                                       
+                                   </ul>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      
+                            
+                 </div>
+               </div>
+             </div>
+              <!-- Attachments -->
+             <div class="inner-wrapper btm-mar">
+               <div class="row">
+                 <h5 class="sub-head" id="attachments">Attachments</h5>
+                 <div class="col-md-12">
+                   <div class="">
+                     <div class="upload-section">   
+                        <div class="row">                
+                            <div class="col-md-3">                
+                                <h3>Select files</h3>                
+                                <div class="well my-drop-zone" ng2filedrop="">
+                                    Drop files to upload                                
+                                </div>                           
+                                <input multiple type="file" class="inputfile" id="fileUpload">   
+                                <label for="fileUpload"><span class="btn btn-primary">Browse</span></label>
+                            </div>                
+                            <div class="col-md-9" style="margin-bottom: 40px">
+                                <h3>Upload queue</h3>
+                                <p>Queue length: 1</p>   
+                                <div class="upload-list">             
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th _ngcontent-rkd-1="" width="40%">Name</th>
+                                        <th _ngcontent-rkd-1="" width="40%">Description</th> 
+                                        <th _ngcontent-rkd-1="">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody _ngcontent-rkd-1="">
+                                    <!--template bindings={}-->
+                                    <tr _ngcontent-rkd-1="">
+                                        <td _ngcontent-rkd-1=""><strong _ngcontent-rkd-1="">Test1.doc</strong></td>
+                                        <!--template bindings={}-->
+                                        <!--template bindings={}-->
+                                        <td _ngcontent-rkd-1="" >
+                                        Sed pulvinar volutpat placerat. Quisque vitae luctus erat.
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                        </td>
+                                        <td _ngcontent-rkd-1="" nowrap="">                                            
+                                            <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                <span class="fa fa-ban" ></span> 
+                                            </button>
+                                            <button class="btn-action delete" type="button" title="Delete">
+                                                <span class="fa fa-trash" ></span> 
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><strong _ngcontent-rkd-1="">Test2.doc</strong></td>
+                                        <!--template bindings={}-->
+                                        <!--template bindings={}-->
+                                        <td>
+                                             Quisque vitae luctus erat.
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                        </td>
+                                        <td nowrap="">                                            
+                                            <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                <span class="fa fa-ban" ></span> 
+                                            </button>
+                                            <button class="btn-action delete" type="button" title="Delete">
+                                                <span class="fa fa-trash" ></span> 
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                <div>
+                                    <div>
+                                        Queue progress:
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                    <button class="btn btn-success btn-s" type="button">
+                                        <span class="fa fa-upload"></span> Upload
+                                    </button>                                   
+                                    </div>
+                                </div>
+                          </div>              
+                        </div>    
+                    </div>    
+                 </div>                    
+                            
+                 </div>
+               </div>
+             </div>
+             <!-- comments -->
+             <div class="inner-wrapper btm-mar">
+               <div class="row">
+                 <h5 class="sub-head" id="comments">Comments</h5>
+                 <div class="col-md-8">
+                    <ul class="listComments"></ul>
+                    <div class="ui-input-group btm-mar">
+                        <textarea class="form-control commentBox" cols="5" rows="5"></textarea>                     
+                        <span class="input-bar"></span>
+                        <label class="textarea-label">Add New Comment</label>
+                    </div>  
+                    <div class="text-right">
+                    <button class="btn btn-primary ripple" id="commentBtn">save</button>   
+                    <button class="btn btn-primary ripple" id="commentClear">Clear</button>  
+                    </div>        
+                 </div>
+               </div>
+             </div> 
+             <!-- Risk Asssesment -->
+             <div class="inner-wrapper btm-mar">
+               <div class="row">
+                 <h5 class="sub-head" id="riskAsssessment">Risk Asssessment</h5>
+                 <div class="col-md-4">
+                    <div>
+                      <div class="ui-input-group">
+                          <input type="text" required class="form-control">
+                          <span class="input-bar"></span>
+                          <label>Impact on org reputation</label>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="ui-input-group">
+                          <input type="text" required class="form-control">
+                          <span class="input-bar"></span>
+                          <label>Lost time</label>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="ui-input-group">
+                          <input type="text" required class="form-control">
+                          <span class="input-bar"></span>
+                          <label>Cost</label>
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-8 risk-rank" >
+                     <h5>Risk Ranking</h5>
+                     <div>
+                       <table width="100%" cellspacing="0" class="risk-rank-table">                                                                
+                                <tr>
+                                    <td width="20%" class="no-border" valign="top">
+                                        <table width="100%" cellspacing="0">
+                                           <tr>
+                                            <td class="lfthead first-lft-head"><b>Likelyhood</b> <i class="fa fa-question-circle info-icon"></i></td></tr>
+                                           <tr><td class="lfthead"><b>Rare</b><i class="fa fa-question-circle info-icon"></i></td></tr>
+                                           <tr><td class="lfthead"><b>Unlikely</b><i class="fa fa-question-circle info-icon"></i></td></tr>
+                                           <tr><td class="lfthead"><b>Possible</b><i class="fa fa-question-circle info-icon"></i></td></tr>
+                                           <tr><td class="lfthead"><b>Likely</b><i class="fa fa-question-circle info-icon"></i></td></tr>
+                                           <tr><td class="lfthead"><b>Certains</b><i class="fa fa-question-circle info-icon"></i></td></tr>
+                                           <tr><td class="lfthead"><b>Unknown</b><i class="fa fa-question-circle info-icon"></i></td></tr>
+                                        </table>
+                                    </td>
+                                    <td width="80%" colspan="5" class="no-border" valign="top">
+                                        <table width="100%" cellspacing="0" class="risk-matrix-table">
+                                            <tr>                                    
+                                                <th colspan="5">Consequences</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="tophead">Insignificant</th>
+                                                <th class="tophead">Minor</th>
+                                                <th class="tophead">Moderate</th>
+                                                <th class="tophead">Major</th>
+                                                <th class="tophead">Catastrophic</th>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="cell active green">1 </div></td>
+                                                <td><div class="cell green">2</div></td>
+                                                <td><div class="cell green">3</div></td>
+                                                <td><div class="cell yellow">4</div></td>
+                                                <td><div class="cell yellow">5</div></td>
+                                            </tr>
+                                            <tr>                                                
+                                                <td ><div class="cell green">2</div></td>
+                                                <td ><div class="cell green">4</div></td>
+                                                <td ><div class="cell green">6</div></td>
+                                                <td ><div class="cell yellow">8</div></td>
+                                                <td ><div class="cell yellow">10</div></td>
+                                            </tr>
+                                            <tr>                                      
+                                                <td ><div class="cell green">3</div></td>
+                                                <td ><div class="cell yellow">6</div></td>
+                                                <td ><div class="cell orange">9</div></td>
+                                                <td ><div class="cell orange">12</div></td>
+                                                <td ><div class="cell red">15</div></td>
+                                            </tr>
+                                             <tr>                                              
+                                                <td ><div class="cell yellow">4</div></td>
+                                                <td ><div class="cell orange">8</div></td>
+                                                <td ><div class="cell orange">12</div></td>
+                                                <td ><div class="cell red">16</div></td>
+                                                <td ><div class="cell red">20</div></td>
+                                            </tr>
+                                            <tr>                                               
+                                                <td ><div class="cell yellow">5</div></td>
+                                                <td ><div class="cell orange">10</div></td>
+                                                <td ><div class="cell red">15</div></td>
+                                                <td ><div class="cell red">20</div></td>
+                                                <td ><div class="cell red">25</div></td>
+                                            </tr>
+                                            <tr>                                                
+                                                <td ><div class="cell ">0</div></td>
+                                                <td ><div class="cell ">0</div></td>
+                                                <td ><div class="cell ">0</div></td>
+                                                <td ><div class="cell ">0</div></td>
+                                                <td ><div class="cell ">0</div></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>                                
+                            </table>
+                     </div>
+                    </div>
+                 </div>
+                 <div class="row mar-top">                        
+                        <div class="col-md-12">
+                              <div class="panel-group mar-top" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#riskAssmtTab1">
+                                         <h4 class="panel-title"> Activity</h4>
+                                    </div>
+                                    <div id="riskAssmtTab1" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                             <div class="row riskAsmntTable">
+                                               <div class="col-md-6 col-sm-6">
+                                                 <div class="ui-input-group">        
+                                                    <input type="text" required="" class="form-control add-input" >  
+                                                    <span class="input-bar"></span>    
+                                                  </div>
+                                                  <ul class="risk-assmnt-data"></ul>
+                                               </div>
+                                               <div class="col-md-6 col-sm-6">
+                                                 <button class="btn btn-blue ripple riskAsmntSave" title="Add"><i class="fa fa-floppy-o"></i></button>
+                                               </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#riskAssmtTab2">
+                                         <h4 class="panel-title"> Hazard</h4>
+                                    </div>
+                                    <div id="riskAssmtTab2" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                             <div class="row riskAsmntTable">
+                                               <div class="col-md-6 col-sm-6">
+                                                 <div class="ui-input-group">        
+                                                    <input type="text" required="" class="form-control add-input" >  
+                                                    <span class="input-bar"></span>    
+                                                  </div>
+                                                  <ul class="risk-assmnt-data"></ul>
+                                               </div>
+                                               <div class="col-md-6 col-sm-6">
+                                                 <button class="btn btn-blue ripple riskAsmntSave" title="Add"><i class="fa fa-floppy-o"></i></button>
+                                               </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#riskAssmtTab3">
+                                         <h4 class="panel-title"> Who might be harmed and how</h4>
+                                    </div>
+                                    <div id="riskAssmtTab3" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                             <div class="row riskAsmntTable">
+                                               <div class="col-md-6 col-sm-6">
+                                                 <div class="ui-input-group">        
+                                                    <input type="text" required="" class="form-control add-input" >  
+                                                    <span class="input-bar"></span>    
+                                                  </div>
+                                                  <ul class="risk-assmnt-data"></ul>
+                                               </div>
+                                               <div class="col-md-6 col-sm-6">
+                                                 <button class="btn btn-blue ripple riskAsmntSave" title="Add"><i class="fa fa-floppy-o"></i></button>
+                                               </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#riskAssmtTab4">
+                                         <h4 class="panel-title"> Existing measures to control risk</h4>
+                                    </div>
+                                    <div id="riskAssmtTab4" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                             <div class="row riskAsmntTable">
+                                               <div class="col-md-6 col-sm-6">
+                                                 <div class="ui-input-group">        
+                                                    <input type="text" required="" class="form-control add-input" >  
+                                                    <span class="input-bar"></span>    
+                                                  </div>
+                                                  <ul class="risk-assmnt-data"></ul>
+                                               </div>
+                                               <div class="col-md-6 col-sm-6">
+                                                 <button class="btn btn-blue ripple riskAsmntSave" title="Add"><i class="fa fa-floppy-o"></i></button>
+                                               </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#riskAssmtTab5">
+                                         <h4 class="panel-title"> Risk rating</h4>
+                                    </div>
+                                    <div id="riskAssmtTab5" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                             <div class="row riskAsmntTable">
+                                               <div class="col-md-6 col-sm-6">
+                                                 <div class="ui-input-group">        
+                                                    <input type="text" required="" class="form-control add-input" >  
+                                                    <span class="input-bar"></span>    
+                                                  </div>
+                                                  <ul class="risk-assmnt-data"></ul>
+                                               </div>
+                                               <div class="col-md-6 col-sm-6">
+                                                 <button class="btn btn-blue ripple riskAsmntSave" title="Add"><i class="fa fa-floppy-o"></i></button>
+                                               </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#riskAssmtTab6">
+                                         <h4 class="panel-title"> Result</h4>
+                                    </div>
+                                    <div id="riskAssmtTab6" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                             <div class="row riskAsmntTable">
+                                               <div class="col-md-6 col-sm-6">
+                                                 <div class="ui-input-group">        
+                                                    <input type="text" required="" class="form-control add-input" >  
+                                                    <span class="input-bar"></span>    
+                                                  </div>
+                                                  <ul class="risk-assmnt-data"></ul>
+                                               </div>
+                                               <div class="col-md-6 col-sm-6">
+                                                 <button class="btn btn-blue ripple riskAsmntSave" title="Add"><i class="fa fa-floppy-o"></i></button>
+                                               </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>                       
+                            </div>
+                        </div>                        
+                        <div class="col-md-12 mar-top">   
+                          <h5><strong>Action Plan</strong></h5>                       
+                           <div class="table">    
+                            <div class="table-row">
+                              <div class="table-head">Ref No.</div>
+                              <div class="table-head">Further Action Req</div>
+                              <div class="table-head">Action By Whom</div>
+                              <div class="table-head">ActionBy When</div>
+                              <div class="table-head">Done</div>                              
+                            </div>
+                            <div class="table-row" >
+                              <div class="table-cell">&nbsp;</div>
+                              <div class="table-cell"></div>
+                              <div class="table-cell"></div>
+                              <div class="table-cell"></div>
+                              <div class="table-cell"></div>                             
+                            </div>
+                            <div class="table-row" >
+                              <div class="table-cell">&nbsp;</div>
+                              <div class="table-cell"></div>
+                              <div class="table-cell"></div>
+                              <div class="table-cell"></div>
+                              <div class="table-cell"></div>                             
+                            </div>
+                          </div>
+                        </div>
+                        
+               </div>
+             </div>
+             <!-- Conclusion -->
+             <div class="inner-wrapper btm-mar">
+               <div class="row">
+                 <h5 class="sub-head" id="Conclusion">Conclusion</h5>
+                 <div class="col-md-8 col-sm-8">
+                   <div class="row">
+                     <div class="col-md-8 col-sm-8">
+                       <div class="ui-input-group">        
+                            <textarea required class="form-control" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Conclusion</label>
+                        </div> 
+                     </div>
+                     <div class="col-md-4 col-sm-4">
+                       <div class="ui-input-group">
+                          <select class="form-control">                
+                            <option>Low Preventability</option>
+                            <option>High Preventability</option>
+                            <option>Unpreventable</option>
+                          </select>
+                          <label class="control-label">Preventability</label>
+                          <span class="input-bar"></span> 
+                        </div>                     
+                     </div>
+                   </div>   
+                 </div>                
+               </div>
+             </div>
+           <!-- Save -->
+            <div class="ftr-btn row ">
+                 <div class="col-md-9 col-sm-9 pull-right fixed-ftr">
+                    <div class="inner-wrapper">
+                        <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                 <button class="btn btn-primary ripple" data-toggle="modal" data-target="#actionPlan" data-backdrop="false" >Action Plan</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#safetyAlert" data-backdrop="false">Safety Alert</button>
+                                 <button class="btn btn-primary">RCA Form</button>
+                                 
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                        <button class="btn btn-primary ripple" type="button">Save</button>
+                                        <button class="btn btn-primary ripple" type="reset"> Clear</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+      <!-- Add New staff/patient Modal -->
+              <div class="modal fade" id="addNewPerson" role="dialog" >
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Add Person</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="addNewbox"> 
+                          <div class="row">
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group btm-mar">        
+                                    <select class="form-control" id="SelectPerson">
+                                       <option selected value="staff">Staff</option>
+                                       <option value="patient">Patient</option>
+                                    </select>                                   
+                                    <span class="input-bar"></span> 
+                                    <label class="control-label">Person Type</label>
+                                </div>
+                             </div>
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <select class="form-control">
+                                       <option disabled selected>Dept</option>
+                                    </select>                                   
+                                    <span class="input-bar"></span> 
+                                </div>
+                             </div>
+                             <div class="col-md-4 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <input type="text" required class="form-control" id="searchPersonInput">  
+                                    <span class="input-bar"></span>
+                                    <label class="nameId">Enter Staff </label> 
+                               </div>
+                             </div>
+                             <div class="col-md-2 mar-tb-10">
+                               <button class="btn btn-primary btn-sm  ripple" id="searchPerson">Search</button>
+                             </div>
+                             <div class="col-md-12">
+                              <ul class="show-result"></ul>
+                             </div>
+                             </div>
+                          </div>                   
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Add</button>
+                      <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+        <!-- Add Participants -->
+              <div class="modal fade" id="addParticipant" role="dialog">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Add Participant</h4>
+                    </div>
+                    <div class="modal-body min-ht">
+                      <div class="addNewbox"> 
+                          <div class="row">
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group btm-mar">        
+                                    <select class="form-control" id="SelectParticipant">
+                                       <option>Royal Hospital</option>
+                                       <option>Al Nahda Hospital </option>
+                                       <option>Khoula Hospital</option>
+                                    </select>                                   
+                                    <span class="input-bar"></span> 
+                                    <label class="control-label">Institution</label>
+                                </div>
+                             </div>
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <input type="text" required class="form-control">  
+                                    <span class="input-bar"></span>
+                                    <label class="nameId">Dept</label> 
+                               </div>
+                             </div>
+                             <div class="col-md-4 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <input type="text" required class="form-control" id="searchParticipant">  
+                                    <span class="input-bar"></span>
+                                    <label class="nameId">Enter Staff </label> 
+                               </div>
+                               <div class="showParticipants"></div>
+                             </div>
+                             <div class="col-md-2 mar-tb-10">
+                               <button class="btn btn-primary btn-sm  ripple" id="searchParticipantBtn">Search</button>
+                             </div>
+                             <div class="col-md-12">
+                              <ul class="participantsList"></ul>
+                             </div>
+                             </div>
+                          </div>                   
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary ripple" id="addNewParticipant">Add</button>
+                      <button class="btn btn-default ripple"  data-dismiss="modal" >Close</button>                    
+                    </div>
+                  </div>
+                </div>
+              </div>  
+
+
+
+       <!-- Action Plan Modal-->
+<div class="modal fade in" id="actionPlan" role="dialog" >
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">                
+      <div class="row">
+           <div class="col-md-6"><h4 class="modal-title">Action Plan</h4></div>
+           <div class="col-md-5">
+          </div>
+          <div class="col-md-1"><button class="close" data-dismiss="modal" type="button">×</button></div>
+      </div>
+    </div>
+    <div class="modal-body">
+    <div class="btm-mar">
+        <div class="inner-wrapper btm-mar "> 
+         <div class="row">
+            <h5 class="sub-head" id="reportingType">Incident Details</h5>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Incident Ref:</label>
+                            <span class="col-md-6">HOSP2486</span>
+                        </div>
+                    </div>                    
+                    <div class="col-md-3 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Classification:</label>
+                            <span class="col-md-6">Sentinal</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Incident Date/Time:</label>
+                            <span class="col-md-6">Feb 26, 2018 2:39 PM</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                            <div class="show-data row">
+                                <label class="control-label col-md-4">Institute:</label>
+                                <span class="col-md-8">Hospital</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="show-data row ng-star-inserted">
+                                <label class="control-label col-md-4">Category:</label>
+                                <span class="col-md-8">MedicalDevice/ Equipment </span>
+                            </div>
+                        </div>
+                    <div class="col-md-4 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Department:</label>
+                            <span class="col-md-6">General Surgery</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <!----><div class="row ng-star-inserted">
+                            <label class="control-label col-md-2">Description:</label>
+                            <div class="saved-data lg-txt col-md-10">Oxygen cylinder shortage.</div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="ui-input-group no-mar-btm">                            
+                            <span><strong>Initial Risk Ranking:</strong>
+                                <span class="risk-status">
+                                    <span class="ng-star-inserted">Low</span> 
+                                </span>
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>          
+    </div> 
+    </div> 
+    <div class="inner-wrapper add-action-plan btm-mar ">               
+            <div class="row">
+              <h5 class="sub-head" id="actionPlan">Action Plan</h5>
+               <div class="col-md-4">
+                 <div class="ui-input-group">
+                  <input class="form-control ng-untouched ng-pristine ng-valid" type="text">
+                  <span class="input-bar"></span>
+                  <label class="control-label">Corrective Action Plan <span class="mandatory">*</span></label>
+                  <!---->
+                </div>  
+            </div>
+            <div class="col-md-8">
+                 <div class="ui-input-group">
+                     <input class="form-control ng-untouched ng-pristine ng-valid" type="text" placeholder="Type first 3 characters to select a staff">  
+                  <span class="input-bar"></span>
+                  <label class="control-label">Responsible Person <span class="mandatory">*</span></label>
+                  <!---->
+                </div>                  
+            </div>                           
+            
+            <div class="col-md-4">
+                 <div class="ui-input-group">
+                  <select class="form-control ng-pristine ng-valid ng-touched">
+                   <option value="0">New</option>
+                   <option value="1">In Progress</option>  
+                   <option value="2">Done</option>                     
+                </select>
+                <label class="control-label">Status</label>
+                <span class="input-bar"></span> 
+                </div>                  
+            </div>
+            <div class="col-md-4">
+                <div class="ui-input-group">
+                 <div class="row">
+                   <div class="col-md-5">
+                     <input onlynumber="true" class="form-control ng-pristine ng-valid ng-touched" type="number">
+                   </div>
+                   <div class="col-md-1 text-center">:</div>
+                   <div class="col-md-5">
+                     <select class="form-control ng-pristine ng-valid ng-touched">
+                       <option value="H">Hours</option>  
+                       <option value="D">Days</option>  
+                       <option value="W">Weeks</option> 
+                       <option value="M">Months</option>  
+                       <option value="Y">Year</option>                                            
+                     </select>
+                   </div>
+                 </div> 
+                 <span class="input-bar"></span>
+                 <label class="control-label">Time Frame <span class="mandatory">*</span></label>
+                 <!---->
+               </div>                  
+           </div> 
+            <div class="col-md-4">
+                 <div class="ui-input-group">
+                        
+                  <span class="input-bar"></span>
+                  <label class="control-label">Follow Up By</label>
+                </div>                  
+            </div>
+         </div>  
+        </div>   
+        <div class="inner-wrapper text-right mar-btm">
+                 <button class="btn btn-primary" id="saveIncident">Save</button>
+                 <button class="btn btn-primary">Reset</button>
+                 <button class="btn btn-primary fa fa-print"></button>
+        </div>  
+    <div class="mar-top btm-mar">                         
+       <div class="table">    
+        <div class="table-row">
+          <div class="table-head">Corrective Action Plan</div>
+          <div class="table-head">Responsible Person</div>
+          <div class="table-head">Time Frame</div>
+          <div class="table-head">Status</div>
+          <div class="table-head">Follow Up</div>                              
+        </div>
+        <div class="table-row" >
+          <div class="table-cell">&nbsp;</div>
+          <div class="table-cell"></div>
+          <div class="table-cell"></div>
+          <div class="table-cell"></div>
+          <div class="table-cell"></div>                             
+        </div>        
+      </div>
+    </div>   
+   
+    <div class="inner-wrapper btm-mar">               
+        <!----><div class="row ng-star-inserted">
+             <h5 class="sub-head" id="actionPlan">Current Risk Ranking</h5>   
+            <div class="col-md-12">                
+                    <div class="row">                        
+                        <div class="col-md-3">
+                            <!----><div class="ui-input-group ng-star-inserted">
+                                <select class="form-control ng-untouched ng-pristine ng-valid">
+                                        <option selected="" value="0: null">--Select--</option>
+                                        <option value="1: 1">Insignificant</option>
+                                        <option value="2: 2">Minor</option>
+                                        <option value="3: 3">Moderate</option>
+                                        <option value="4: 4">Major</option>
+                                        <option value="5: 5">Catastrophic</option>
+                                </select>
+                                <label class="control-label">Consequences</label>
+                                <span class="input-bar"></span>
+                               <!---->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <!----><div class="ui-input-group ng-star-inserted">
+                                <select class="form-control ng-untouched ng-pristine ng-valid">
+                                        <option selected="" value="0: null">--Select--</option>
+                                        <option value="1: 1">Rare</option>
+                                        <option value="2: 2">Unlikely</option>
+                                        <option value="3: 3">Possible</option>
+                                        <option value="4: 4">Likely</option>
+                                        <option value="5: 5">Certain</option>
+                                </select>
+                                <label class="control-label">Likelihood</label>
+                                <span class="input-bar"></span>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <!---->
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary btn-sm ripple btn-mar-top">Save</button>
+                        </div>
+                    </div>                
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+    </div>
+  </div> 
+ </div>   
+ </div>  
+                 
+ <!-- Safety Alert Modal-->     
+ <div class="modal fade" id="safetyAlert" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Safety Alert & Lesson Learnt</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                 <div class="col-md-4">
+                      <div class="show-data row"> 
+                          <label class="control-label col-md-6">Incident No:</label>
+                          <span class="col-md-6">HOSP2482</span>
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="show-data row">
+                          <label class="control-label col-md-6">Date of Incident:</label>
+                          <span class="col-md-6">12/10/2017</span>
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="show-data row">
+                        <label class="control-label col-md-6">Category:</label>   
+                        <span class="col-md-6">Others - Organisation</span>                    
+                    </div>
+                  </div>   
+                  <div class="col-md-12">
+                      <div class="row">   
+                        <label class="control-label col-md-12">Event Description:</label>     
+                        <div class="col-md-12">
+                           <div class="saved-data lg-txt">Oxygen cylinder shortage</div>
+                        </div>
+                    </div>
+                  </div>                          
+                  <div class="col-md-12">
+                      <div class="ui-input-group">        
+                            <textarea required="" class="form-control" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Preventive/Corrective Action to Be Taken:</label>
+                        </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="ui-input-group">        
+                            <textarea required="" class="form-control" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Lesson Learnt</label>
+                        </div>
+                  </div>
+             </div>                  
+            </div>                   
+          </div>
+        </div>
+      </div>
+                 
+<!-- RCA Modal-->                  
+<div class="modal fade in" id="RCAmodal" role="dialog">
+<div class="modal-dialog modal-lg">
+
+  <div class="modal-content">
+    <div class="modal-header">                
+      <div class="row">
+           <div class="col-md-6"><h4 class="modal-title">Root Cause Analysis</h4></div>
+           <div class="col-md-5">
+          </div>
+          <div class="col-md-1"><button class="close" data-dismiss="modal" type="button">×</button></div>
+      </div>
+    </div>
+ <div class="modal-body">
+<div>    
+    <div class="inner-wrapper btm-mar">
+        <div class="row">
+            <h5 class="sub-head" id="reportingType">Incident Details</h5>
+            <div class="col-md-12">
+                <div class="row">
+                    <!----><div class="col-md-6 ng-star-inserted">
+                        <div class="ui-input-group">
+                            <label class="control-label">Incident Ref:</label>
+                            <div class="saved-data"><span>HOSP1723059</span></div>
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="ui-input-group">
+                            <div class="saved-data"><span>Hospital</span></div>
+                            <label class="control-label">Institute</label>
+                        </div>
+                    </div> 
+                    <!----><div class="col-md-6 ng-star-inserted">
+                        <div class="ui-input-group">
+                            <div class="saved-data lg-txt">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                            <label class="control-label label-top">Description</label>
+                        </div>
+                    </div>
+                    <!----><div class="col-md-6 ng-star-inserted">
+                        <div class="ui-input-group">
+                            <div class="saved-data">Aug 21, 2017 12:24 PM</div>
+                            <label class="control-label">When</label>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="block search-add-list active">
+                            <h6>Investigated Team Members</h6>
+                            <div class="mar-10">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ui-input-group">
+                                            <div>
+                                                <input class="form-control ng-untouched ng-pristine ng-valid" type="text">
+                                                <span class="input-bar"></span>
+                                            </div>
+                                            <div>
+                                                
+                                                <span class="input-bar"></span>
+                                                <label class="control-label">Type Staff Number / Name</label>
+                                                <div class="results" style="display: none;"></div>
+                                                <ul class="addList searchList">
+                                                    <!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inner-wrapper btm-mar">
+        <div class="row">                       
+        <h5 class="sub-head">Root Cause Analysis</h5>
+        <div class="col-md-6">
+                <div class="ui-input-group">
+                    <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                    <span class="input-bar"></span>
+                    <label class="control-label" style="white-space:inherit">What areas/services were impacted</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ui-input-group">
+                    <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                    <span class="input-bar"></span>
+                    <label class="control-label" style="white-space:inherit">Identify risk point and their contribution to the event</label>
+                </div>
+            </div>                        
+        </div>
+    </div>
+    <div class="inner-wrapper btm-mar bg-info">
+        <div class="row">
+            <h5 class="sub-head" id="reportingType">Background Information</h5>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6 co-sm-12">
+                        <div class="ui-input-group" style="padding-top:15px;">
+                            <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="control-label" style="white-space:inherit">What sequence of event should have taken place</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 co-sm-12">
+                        <div class="ui-input-group"  style="padding-top:15px;">
+                            <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="control-label" style="white-space:inherit">What deviation from the expected sequence may have led orcontributed to the event</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 co-sm-12">
+                        <div class="ui-input-group"  style="padding-top:15px;">
+                            <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="control-label" style="white-space:inherit">Did a malfunction, or an absence of equipment appear to have contributed to the event</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 co-sm-12">
+                        <div class="ui-input-group"  style="padding-top:15px;">
+                            <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="control-label" style="white-space:inherit">Was the procedure involved carried out in an appropriate location?</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inner-wrapper text-right">
+        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary">Reset</button>
+    </div>
+
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>   
+         
+  <!-- /#page-content-wrapper --> 
+</div>
+<!-- jQuery --> 
+<script src="../assets/libs/jquery/jquery.js"></script> 
+<script src="../assets/libs/scrollTo/jquery.scrollto.js"></script>
+<script src="../assets/js/bootstrap/bootstrap.min.js"></script> 
+<script src="../assets/js/custom.js"></script>
+</body>
+</html>

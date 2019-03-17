@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maintenance Requests</title>
+<!-- Bootstrap Core CSS -->
+<link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="../assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+<header class="navbar navbar-default"> 
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header fixed-brand tgl">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle"><span class="hamb-menu"><i class="hamb-icon"></i></span></button>
+    <a class="navbar-brand" href="javascript:;">ProSys</a> </div>
+  <!-- navbar-header-->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                         <button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> 
+                           <span class="hamb-menu" ><i class="hamb-icon"></i></span>
+                         </button>
+                        </li>
+                    </ul>                    
+                    <ul class="nav navbar-nav navbar-right hidden-xs right-nav"> 
+                      <li><a class="display-name">John Doe | Al Hilal Real Estate </a></li>
+                      <li class="dropdown">
+                         <a href="javascript:;" class="user-icons dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle-o"></i><span class="caret"></span></a>
+                         <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="">Policy & Procedures</a></li> 
+                          <li><a href="">User Manual</a></li>                        
+                          <li><a href="">Request for Support</a></li>
+                        </ul>
+                      </li>                      
+                      <li class="dropdown">                       
+                        <a href="javascript:;" class="dropdown-toggle user-icons" data-toggle="dropdown"><i class="fa fa-user-circle-o" ></i> 
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="" data-toggle="modal" data-target="#changePassword">Change Password</a></li>                        
+                          <li><a href="../login/login.html">Logout</a></li>
+                        </ul>
+                      </li>               
+                    </ul>                    
+                </div>
+  <!-- /#navbar-header --> 
+</header>
+<div id="wrapper" class="toggled-2"> 
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+	<ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+		<li class="active"><a href="../dashboard/dashboard.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-desktop"></i></span>Dashboard</a></li>
+		 <li><a href="../buildingRegistration/buildingRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-building" ></i></span>Building Registration</a>                </li>
+		 <li><a href="../buildingRegistration/flatRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-building-o" ></i></span>Flat Registration</a>                </li>
+		 <li><a href="../TenantRegistration/tenantRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-address-card-o" ></i></span>Tenant Registration</a></li>
+		 <li><a href="../TenantLinking/tenantLinking.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sliders" ></i></span>Tenant Linking</a></li>
+		 <li><a href="../Maintenance/maintenanceRequest.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bullhorn" ></i></span>Maintenance Request</a></li>
+		 <li><a href="../RentalPayment/rentalPayment.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-money" ></i></span>Rental Payment</a></li>
+		 <li><a href="../searchTenant/searchTenant.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Tenant Search</a></li>
+		 <li><a href="../buildingSearch/buildingSearch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Building Search</a></li>
+		 <li><a href="../flatSearch/flatSearch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Flat Search</a></li>
+		 <li><a href="../Reports/buildingIncomeExpenditure.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-list" ></i></span>Financial Report</a></li>
+				<li><a href=""><span class="fa-stack fa-lg pull-left"><i class="fa fa-address-book" ></i></span>Employee Registration</a></li>
+		 <li><a href=""><span class="fa-stack fa-lg pull-left"><i class="fa fa-car" ></i></span>Vehicle Registration</a></li>
+			 
+	   <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-circle-o"></i></span>Profile</a> </li>
+	   <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sign-out"></i></span>Logout</a> </li>
+	 </ul>
+          </div>
+  <!-- /#sidebar-wrapper --> 
+  <!-- Page Content -->
+  <div id="page-content-wrapper" class="animated fadeIn">
+    <h4 class="title">Maintenance Requests</h4>
+    <div class="inner-wrapper"> 
+		<!-- external page content-->
+		<div id="pageLoad">
+			<div class="row">
+
+					<!-- Row1 start -->
+					<div class="col-md-3 col-sm-3">
+						<div class="ui-input-group">
+							<select class="form-control">                
+								<option>--select--</option>
+								<option>Compounded</option>
+								<option>Non Compounded</option>
+								<option>Villa</option>
+							</select>
+						  <label class="control-label">Building Type</label>
+						  <span class="input-bar"></span> 
+						</div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+						<div class="ui-input-group">
+							<select class="form-control">                
+								<option>--select--</option>
+								<option>B164-Ruwi</option>
+								<option>B165-Mattrah</option>
+								<option>B166-Seeb</option>
+							</select>
+						  <label class="control-label">Select Building</label>
+						  <span class="input-bar"></span> 
+						</div>
+                     </div>
+                     <div class="col-md-3 col-sm-3">
+						<div class="ui-input-group">
+							<select class="form-control">                
+								<option>--select--</option>
+								<option>F1</option>
+								<option>F2</option>
+								<option>F3</option>
+							</select>
+						  <label class="control-label">Flat</label>
+						  <span class="input-bar"></span> 
+						</div>
+                     </div>
+					 <div class="col-md-3 col-sm-3">
+						<div class="ui-input-group">
+							<select class="form-control">                
+								<option>--select--</option>
+								<option>Electrical</option>
+								<option>Plumbing</option>
+								<option>Painting</option>
+							</select>
+						  <label class="control-label">Maintenance Type</label>
+						  <span class="input-bar"></span> 
+						</div>
+                     </div>
+
+					<!-- Row1 End -->
+
+					<!-- Row2 start -->
+					<div class="col-md-3 col-sm-3">
+						<div class="ui-input-group">
+							<select class="form-control">                
+								<option>--select--</option>
+								<option>Urgent</option>
+								<option>High</option>
+								<option>Medium</option>
+								<option>Low</option>
+							</select>
+						  <label class="control-label">Priority</label>
+						  <span class="input-bar"></span> 
+						</div>
+                    </div>
+					<div class="col-md-3 col-sm-3">
+						<div class="ui-input-group">
+							<select class="form-control">                
+								<option>--select--</option>
+								<option>New</option>
+								<option>Pending</option>
+								<option>Approved</option>
+								<option>Work in Progess</option>
+								<option>Completed</option>
+								<option>Closed</option>
+							</select>
+						  <label class="control-label">Request Status</label>
+						  <span class="input-bar"></span> 
+						</div>
+                    </div>
+					<div class="col-md-3 col-sm-3">
+						<div class="ui-input-group">
+							<select class="form-control">                
+								<option>--select--</option>
+								<option>Abdul Gafoor -- 15263485</option>
+								<option>Haitham -- 15268785</option>
+								<option>John David -- 15254485</option>
+							</select>
+						  <label class="control-label">Tenant</label>
+						  <span class="input-bar"></span> 
+						</div>
+                    </div>
+					<div class="col-md-3 col-sm-3">
+                      <div class="ui-input-group">        
+                            <input type="text" required class="form-control search" >  
+                            <span class="input-bar"></span>
+                            <label class="control-label"> Request Date(dd/MM/yyyy)</label>
+                            <span class="input-bar"></span>
+                        </div>
+                      </div>               
+					<!-- Row2 End -->
+
+					<!-- Row3 start -->
+					<div class="col-md-3 col-sm-3">
+                      <div class="ui-input-group">        
+                            <input type="text" required class="form-control search" >  
+                            <span class="input-bar"></span>
+                            <label class="control-label"> Request Date From</label>
+                            <span class="input-bar"></span>
+                        </div>
+                      </div> 
+					<div class="col-md-3 col-sm-3">
+                      <div class="ui-input-group">        
+                            <input type="text" required class="form-control search" >  
+                            <span class="input-bar"></span>
+                            <label class="control-label"> Request Date To</label>
+                            <span class="input-bar"></span>
+                        </div>
+                      </div>               
+					<!-- Row3 End -->
+
+				  <div class="col-md-12 col-sm-6">
+					<div class="btn-container">
+					  <button class="btn btn-primary ripple">Search</button>
+					  <button class="btn btn-primary ripple">Clear</button>
+					  <button class="btn btn-primary ripple" title="Make New Maintenance Request"  data-toggle="modal" data-target="#addNewRequest" id="maintenanceRequestBtn" data-backdrop="static">New Request</button>
+					</div>
+				  </div>
+			</div>
+		</div>
+    </div>
+
+    <div class="grid-wrapper animated fadeIn"> 
+      <div class="table">
+         <div class="table-row-head">
+		   <div class="table-head">Request ID</div>
+           <div class="table-head">Tenant Name</div>           
+           <div class="table-head">Building</div>
+           <div class="table-head">Flat</div>
+		   <div class="table-head">Priority</div>           
+           <div class="table-head">Maintance Type</div>
+           <div class="table-head">Request Date</div>
+		   <div class="table-head">Staus</div>
+		   <div class="table-head">Description</div>
+		   <div class="table-head">Action</div>
+         </div>
+         <div class="table-row">
+		   <div class="table-cell">00001</div>
+           <div class="table-cell">Haitham</div>
+           <div class="table-cell">B164-Ruwi</div>
+           <div class="table-cell">F1</div>
+		   <div class="table-cell">Urgent</div>
+           <div class="table-cell">Electrical</div>
+           <div class="table-cell">10/02/2019</div>
+		   <div class="table-cell">Work in Progress</div>
+           <div class="table-cell">2 bulbs and 1 fan are Not Working</div>
+		   <div class="table-cell">
+				<!--<button class="btn-action cancel" type="button" disabled="" title="Cancel"><span class="fa fa-ban" ></span></button>-->
+				<button class="btn-action cancel" type="button" title="View" data-toggle="modal" data-target="#requestView" id="requestViewBtn" data-backdrop="static"><span class="fa fa-search" ></span></button>
+				<button class="btn-action delete" type="button" title="Edit" data-toggle="modal" data-target="#editRequest" id="editRequestBtn" data-backdrop="static"><span class="fa fa-edit" ></span></button>
+				<button class="btn-action delete" type="button" title="Delete" data-toggle="modal" data-target="#deleteRequest" id="deleteRequestBtn" data-backdrop="static"><span class="fa fa-trash" ></span></button>
+				<button class="btn-action cancel" type="button" title="Assign" data-toggle="modal" data-target="#assignEmployee" id="assignEmployeeBtn" data-backdrop="static"><span class="fa fa-user" ></span></button>
+				<button class="btn-action delete" type="button" title="Work" data-toggle="modal" data-target="#workDetails" id="workDetailsBtn" data-backdrop="static"><span class="fa fa-tasks" ></span></button>
+				<button class="btn-action cancel" type="button" title="Feedback" data-toggle="modal" data-target="#feedbacks" id="feedbacksBtn" data-backdrop="static"><span class="fa fa-commenting-o" ></span></button>
+				<button class="btn-action delete" type="button" title="Close" data-toggle="modal" data-target="#requestClose" id="requestCloseBtn" data-backdrop="static"><span class="fa fa-close" ></span></button>
+		   </div>
+         </div> 
+		 <div class="table-row">
+		   <div class="table-cell">00002</div>
+           <div class="table-cell">Abdul Gafoor</div>
+           <div class="table-cell">B166-Seeb</div>
+           <div class="table-cell">F3</div>
+		   <div class="table-cell">Low</div>
+           <div class="table-cell">Painting</div>
+           <div class="table-cell">11/02/2019</div>
+		   <div class="table-cell">Pending</div>
+           <div class="table-cell">Wall Painiting</div>
+		   <div class="table-cell">
+				<!--<button class="btn-action cancel" type="button" disabled="" title="Cancel"><span class="fa fa-ban" ></span></button>-->
+				<button class="btn-action cancel" type="button" title="View" data-toggle="modal" data-target="#requestView" id="requestViewBtn" data-backdrop="static"><span class="fa fa-search" ></span></button>
+				<button class="btn-action delete" type="button" title="Edit" data-toggle="modal" data-target="#editRequest" id="editRequestBtn" data-backdrop="static"><span class="fa fa-edit" ></span></button>
+				<button class="btn-action delete" type="button" title="Delete" data-toggle="modal" data-target="#deleteRequest" id="deleteRequestBtn" data-backdrop="static"><span class="fa fa-trash" ></span></button>
+				<button class="btn-action cancel" type="button" title="Assign" data-toggle="modal" data-target="#assignEmployee" id="assignEmployeeBtn" data-backdrop="static"><span class="fa fa-user" ></span></button>
+				<button class="btn-action delete" type="button" title="Work" data-toggle="modal" data-target="#workDetails" id="workDetailsBtn" data-backdrop="static"><span class="fa fa-tasks" ></span></button>
+				<button class="btn-action cancel" type="button" title="Feedback" data-toggle="modal" data-target="#feedbacks" id="feedbacksBtn" data-backdrop="static"><span class="fa fa-commenting-o" ></span></button>
+				<button class="btn-action delete" type="button" title="Close" data-toggle="modal" data-target="#requestClose" id="requestCloseBtn" data-backdrop="static"><span class="fa fa-close" ></span></button>
+		   </div>
+         </div> 
+       </div>
+       <div class="clearfix">
+		<ul class="pagination pagination-sm pull-right"> <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li> <li><a href="#">1</a></li> <li><a href="#">2</a></li> <li><a href="#">3</a></li> <li><a href="#">4</a></li> <li><a href="#">5</a></li> <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li> </ul> 
+       </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper --> 
+</div>
+
+<!-- Add New Maintenance Request Modal Start -->
+<div class="modal fade" id="addNewRequest" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">New Maintenance Request</h4>
+            </div>
+            <div class="modal-body">
+				<div class="addNewbox"> 
+					<div class="row">
+						
+						<!-- Row1 start -->
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>Compounded</option>
+									<option>Non Compounded</option>
+									<option>Villa</option>
+								</select>
+							  <label class="control-label">Building Type</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>B164-Ruwi</option>
+									<option>B165-Mattrah</option>
+									<option>B166-Seeb</option>
+								</select>
+							  <label class="control-label">Select Building</label>
+							  <span class="input-bar"></span> 
+							</div>
+						 </div>
+						 <div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>F1</option>
+									<option>F2</option>
+									<option>F3</option>
+								</select>
+							  <label class="control-label">Flat</label>
+							  <span class="input-bar"></span> 
+							</div>
+						 </div>
+						<!-- Row1 End -->
+
+						<!-- Row2 start -->
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>Abdul Gafoor -- 15263485</option>
+									<option>Haitham -- 15268785</option>
+									<option>John David -- 15254485</option>
+								</select>
+							  <label class="control-label">Tenant</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>Electrical</option>
+									<option>Plumbing</option>
+									<option>Painting</option>
+								</select>
+							  <label class="control-label">Maintenance Type</label>
+							  <span class="input-bar"></span> 
+							</div>
+						 </div>
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>Urgent</option>
+									<option>High</option>
+									<option>Medium</option>
+									<option>Low</option>
+								</select>
+							  <label class="control-label">Priority</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>              
+						<!-- Row2 End -->
+
+						<!-- Row3 start -->	
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Prefered Date</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Prefered Time</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Contact No</label>
+								<span class="input-bar"></span>
+							</div>
+						</div>               
+						<!-- Row3 End -->
+						<!-- Row4 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="ui-input-group">        
+								<textarea required class="form-control search" cols="4" rows="6"></textarea>  
+								<span class="input-bar"></span>
+								<label class="control-label"> Description</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						              
+						<!-- Row4 End -->
+                          
+					</div>
+				</div>
+                                       
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>
+              <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+<!-- Add New Maintenance Request Modal Ends -->
+
+<!-- Request View Modal Start -->
+<div class="modal fade" id="requestView" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Request Details</h4>
+            </div>
+            <div class="modal-body">
+				<div class="addNewbox"> 
+					<div class="row">
+
+						<!-- Row1 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="block" id="tenantDetails">
+								<h6>Tenant Details
+									<!--<button class="icon-btn pull-right addNewBtn" title="Add New" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button> -->
+								</h6>
+								<table class="table">
+									<tbody>
+										<tr>	
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="Haitham" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Tenant Name</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="15268785" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Contact No</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="haitham@gmail.com" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Email</label>
+													<span class="input-bar"></span>
+												</div>
+											</div>               
+										</tr>
+										<tr>	
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="28235678261" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> ID No</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="B164-Ruwi" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Bulding</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="F1" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Flat</label>
+													<span class="input-bar"></span>
+												</div>
+											</div>               
+										</tr>
+									</tbody>
+								</table>	
+							</div>
+						</div> 
+						<!-- Row1 End -->
+
+						<!-- Row2 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="block" id="contractDetails">
+								<h6>Contract Details
+									<!--<button class="icon-btn pull-right addNewBtn" title="Add New" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button> -->
+								</h6>
+								<table class="table">
+									<tbody>
+										<tr>	
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="C786531" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Contract ID</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="Jan-2017 to Dec-2017" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Contract Period</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="Rent" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Contract Type</label>
+													<span class="input-bar"></span>
+												</div>
+											</div>               
+										</tr>
+										<tr>	
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="250 OMR" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Rent Amount</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="No" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Payment Due</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="0 OMR" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Due Amount</label>
+													<span class="input-bar"></span>
+												</div>
+											</div>               
+										</tr>
+									</tbody>
+								</table>	
+							</div>
+						</div> 
+						<!-- Row2 End -->
+
+						<!-- Row3 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="block" id="maintenanceDetails">
+								<h6>Maintenance Details
+									<!--<button class="icon-btn pull-right addNewBtn" title="Add New" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button> -->
+								</h6>
+								<table class="table">
+									<tbody>
+										<tr>	
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="00001" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Request ID</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="10/02/2019" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Request Date</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="Electrical" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Maintenance Type</label>
+													<span class="input-bar"></span>
+												</div>
+											</div>               
+										</tr>
+										<tr>
+											<div class="col-md-6 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="Work in Progress" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Status</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-6 col-sm-4">
+												<div class="ui-input-group">        
+													<textarea required class="form-control search" cols="4" rows="2" placeholder="2 Bulbs and one fan are not working." readonly></textarea>  
+													<span class="input-bar"></span>
+													<label class="control-label">Problems</label>
+													<span class="input-bar"></span>
+												</div>
+											</div>
+										</tr>
+										<tr>	
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="Arjun -- 43567890" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Assigned Employee</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="22/06/2019 10:00 AM" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Assigned Date & Time</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-4 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="Urgent" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Priority</label>
+													<span class="input-bar"></span>
+												</div>
+											</div>               
+										</tr>
+										<tr>
+											<div class="col-md-6 col-sm-4">
+												<div class="ui-input-group">        
+													<input type="text" required class="form-control search" value="22/06/2019" readonly>  
+													<span class="input-bar"></span>
+													<label class="control-label"> Work Done on</label>
+													<span class="input-bar"></span>
+												</div>
+											</div> 
+											<div class="col-md-6 col-sm-4">
+												<div class="ui-input-group">        
+													<textarea required class="form-control search" cols="4" rows="2" placeholder="2 Bulbs and one fan are replaced with new." readonly></textarea>  
+													<span class="input-bar"></span>
+													<label class="control-label">Work Done</label>
+													<span class="input-bar"></span>
+												</div>
+											</div>
+										</tr>
+									</tbody>
+								</table>	
+							</div>
+						</div> 
+						<!-- Row3 End -->
+
+						<!-- Row4 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="block" id="participants">
+								<h6>Items Purchased Details
+									<button class="icon-btn pull-right addNewBtn" title="Add New" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button> 
+								</h6>
+								<table class="table">
+									<thead>
+										<tr>
+											<th _ngcontent-rkd-1="" width="40%">Item Name</th>
+                                            <th _ngcontent-rkd-1="" width="20%">Quantity</th> 
+                                            <th _ngcontent-rkd-1="" width="20%">Amount</th>
+                                            <th _ngcontent-rkd-1="" width="20%">Actions</th>
+                                        </tr>
+									</thead>
+                                    <tbody _ngcontent-rkd-1="">                                               
+										<tr _ngcontent-rkd-1="">
+											<td _ngcontent-rkd-1="">Bulb</td>
+                                            <td _ngcontent-rkd-1="" >2</td>
+                                            <td>20</td>
+                                            <td _ngcontent-rkd-1="" nowrap="">                                            
+												<button class="btn-action cancel" type="button" title="Edit" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><span class="fa fa-edit" ></span></button>
+                                                <button class="btn-action delete" type="button" title="Delete"><span class="fa fa-trash" ></span></button>
+                                            </td>
+										</tr>
+										<tr _ngcontent-rkd-1="">
+											<td _ngcontent-rkd-1="">Fan</td>
+                                            <td _ngcontent-rkd-1="" >1</td>
+                                            <td>200</td>
+                                            <td _ngcontent-rkd-1="" nowrap="">                                            
+												<button class="btn-action cancel" type="button" title="Edit" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><span class="fa fa-edit" ></span></button>
+                                                <button class="btn-action delete" type="button" title="Delete"><span class="fa fa-trash" ></span></button>
+                                            </td>
+										</tr>
+										<tr _ngcontent-rkd-1="">
+											<td _ngcontent-rkd-1="" colspan="2"><strong _ngcontent-rkd-1="">Total Amount</strong></td>
+                                            <!--<td _ngcontent-rkd-1="" >1</td>-->
+                                            <td ><strong _ngcontent-rkd-1="">220</strong></td>
+                                            <td _ngcontent-rkd-1="" nowrap="">                                            
+												&nbsp;
+                                            </td>
+										</tr>
+                                    </tbody>
+								</table>
+							</div>
+						</div> 
+						<!-- Row4 End -->
+
+						<!-- Row5 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="block" id="participants">
+								<h6>Feedbacks/Comments
+									<!--<button class="icon-btn pull-right addNewBtn" title="Add New" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button>--> 
+								</h6>
+								<ul class="list participantListView">
+								  <li>Maintenance work was neat, Thank You &lt;Tenant&gt; 
+									  <div class="action-btns">
+										  <label for="C01" title="Must Reply"><input type="checkbox" id="C01" ><span class="fa fa-reply"></span></label>
+										  <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+										  <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+									  </div>
+								   </li>
+								  <li>Thank You &lt;Manager&gt; 
+									  <div class="action-btns">
+										  <label for="C01" title="Must Reply"><input type="checkbox" id="C01" ><span class="fa fa-reply"></span></label>
+										  <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+										  <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+									  </div>
+								   </li>
+								</ul>
+							</div>
+						</div> 
+						<!-- Row5 End -->
+                          
+					</div>
+				</div>
+                                       
+            </div>
+            <div class="modal-footer">
+              <!--<button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>-->
+              <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+<!-- Request View Modal Ends -->
+
+<!-- Eidt Maintenance Request Modal Start -->
+<div class="modal fade" id="editRequest" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Edit Maintenance Request</h4>
+            </div>
+            <div class="modal-body">
+				<div class="addNewbox"> 
+					<div class="row">
+						
+						<!-- Row1 start -->
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>Compounded</option>
+									<option>Non Compounded</option>
+									<option selected>Villa</option>
+								</select>
+							  <label class="control-label">Building Type</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option selected>B164-Ruwi</option>
+									<option>B165-Mattrah</option>
+									<option>B166-Seeb</option>
+								</select>
+							  <label class="control-label">Select Building</label>
+							  <span class="input-bar"></span> 
+							</div>
+						 </div>
+						 <div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option selected>F1</option>
+									<option>F2</option>
+									<option>F3</option>
+								</select>
+							  <label class="control-label">Flat</label>
+							  <span class="input-bar"></span> 
+							</div>
+						 </div>
+						<!-- Row1 End -->
+
+						<!-- Row2 start -->
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>Abdul Gafoor -- 15263485</option>
+									<option selected>Haitham -- 15268785</option>
+									<option>John David -- 15254485</option>
+								</select>
+							  <label class="control-label">Tenant</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option selected>Electrical</option>
+									<option>Plumbing</option>
+									<option>Painting</option>
+								</select>
+							  <label class="control-label">Maintenance Type</label>
+							  <span class="input-bar"></span> 
+							</div>
+						 </div>
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option selected>Urgent</option>
+									<option>High</option>
+									<option>Medium</option>
+									<option>Low</option>
+								</select>
+							  <label class="control-label">Priority</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>              
+						<!-- Row2 End -->
+
+						<!-- Row3 start -->	
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" value="15/02/2019" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Prefered Date</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" value="4:00 PM" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Prefered Time</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" value="34567890">  
+								<span class="input-bar"></span>
+								<label class="control-label"> Contact No</label>
+								<span class="input-bar"></span>
+							</div>
+						</div>               
+						<!-- Row3 End -->
+						<!-- Row4 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="ui-input-group">        
+								<textarea required class="form-control search" cols="4" rows="6" placeholder="2 bulbs and 1 fan are Not Working	"></textarea>  
+								<span class="input-bar"></span>
+								<label class="control-label"> Description</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						              
+						<!-- Row4 End -->
+                          
+					</div>
+				</div>
+                                       
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>
+              <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+<!-- Edit Maintenance Request Modal Ends -->
+
+<!-- Delete Request Modal Start -->
+<div id="deleteRequest" class="modal fade" style="display: none;">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<!--<div class="icon-box">
+					<i class="material-icons"></i>
+				</div>-->				
+				<h4 class="modal-title">Are you sure?</h4>	
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			</div>
+			<div class="modal-body">
+				<p>Do you really want to delete these request?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Delete Request Modal Ends -->
+
+<!-- Assign Employee Modal Start -->
+<div class="modal fade" id="assignEmployee" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Assign Employee</h4>
+            </div>
+            <div class="modal-body">
+				<div class="addNewbox"> 
+					<div class="row">
+						
+						<!-- Row1 start -->
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" value="00001" readonly>  
+								<span class="input-bar"></span>
+								<label class="control-label"> Request ID</label>
+								<span class="input-bar"></span>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control" disabled>                
+									<option>--select--</option>
+									<option selected>Electrical</option>
+									<option>Plumbing</option>
+									<option>Painting</option>
+								</select>
+							  <label class="control-label">Maintenance Type</label>
+							  <span class="input-bar"></span> 
+							</div>
+						 </div>
+						 <div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>Arjun -- 43567890</option>
+									<option>Navas -- 34256789</option>
+									<option>Akbar -- 12321356</option>
+								</select>
+							  <label class="control-label">Employee</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>
+						<!-- Row1 End -->
+
+						<!-- Row2 start -->	
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Work Date</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Work Time</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Employee Mobile No</label>
+								<span class="input-bar"></span>
+							</div>
+						</div>               
+						<!-- Row2 End -->
+						<!-- Row3 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="ui-input-group">        
+								<textarea required class="form-control search" cols="4" rows="6"></textarea>  
+								<span class="input-bar"></span>
+								<label class="control-label"> Description</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						              
+						<!-- Row3 End -->
+                          
+					</div>
+				</div>
+                                       
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>
+              <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+<!-- Assign Employee Modal Ends -->
+
+<!-- Work Details Modal Start -->
+<div class="modal fade" id="workDetails" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Work Details</h4>
+            </div>
+            <div class="modal-body">
+				<div class="addNewbox"> 
+					<div class="row">
+						
+						<!-- Row1 start -->
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" value="00001" readonly>  
+								<span class="input-bar"></span>
+								<label class="control-label"> Request ID</label>
+								<span class="input-bar"></span>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control" disabled>                
+									<option>--select--</option>
+									<option selected>Electrical</option>
+									<option>Plumbing</option>
+									<option>Painting</option>
+								</select>
+							  <label class="control-label">Maintenance Type</label>
+							  <span class="input-bar"></span> 
+							</div>
+						 </div>
+						 <div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option selected>Arjun -- 43567890</option>
+									<option>Navas -- 34256789</option>
+									<option>Akbar -- 12321356</option>
+								</select>
+							  <label class="control-label">Employee</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>
+						<!-- Row1 End -->
+
+						<!-- Row2 start -->	
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Start Date</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> End Date</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-3 col-sm-3">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>New</option>
+									<option>Pending</option>
+									<option>Approved</option>
+									<option>Work in Progess</option>
+									<option>Completed</option>
+									<option>Closed</option>
+								</select>
+							  <label class="control-label">Status</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>               
+						<!-- Row2 End -->
+						<!-- Row3 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="ui-input-group">        
+								<textarea required class="form-control search" cols="4" rows="6"></textarea>  
+								<span class="input-bar"></span>
+								<label class="control-label">Work Details</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						              
+						<!-- Row3 End -->
+						<!-- Row4 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="block" id="participants">
+								<h6>Items Purchased Details
+									<button class="icon-btn pull-right addNewBtn" title="Add New" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button> 
+								</h6>
+								<table class="table">
+									<thead>
+										<tr>
+											<th _ngcontent-rkd-1="" width="40%">Item Name</th>
+                                            <th _ngcontent-rkd-1="" width="20%">Quantity</th> 
+                                            <th _ngcontent-rkd-1="" width="20%">Amount</th>
+                                            <th _ngcontent-rkd-1="" width="20%">Actions</th>
+                                        </tr>
+									</thead>
+                                    <tbody _ngcontent-rkd-1="">                                               
+										<tr _ngcontent-rkd-1="">
+											<td _ngcontent-rkd-1="">Bulb</td>
+                                            <td _ngcontent-rkd-1="" >2</td>
+                                            <td>20</td>
+                                            <td _ngcontent-rkd-1="" nowrap="">                                            
+												<button class="btn-action cancel" type="button" title="Edit" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><span class="fa fa-edit" ></span></button>
+                                                <button class="btn-action delete" type="button" title="Delete"><span class="fa fa-trash" ></span></button>
+                                            </td>
+										</tr>
+										<tr _ngcontent-rkd-1="">
+											<td _ngcontent-rkd-1="">Fan</td>
+                                            <td _ngcontent-rkd-1="" >1</td>
+                                            <td>200</td>
+                                            <td _ngcontent-rkd-1="" nowrap="">                                            
+												<button class="btn-action cancel" type="button" title="Edit" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><span class="fa fa-edit" ></span></button>
+                                                <button class="btn-action delete" type="button" title="Delete"><span class="fa fa-trash" ></span></button>
+                                            </td>
+										</tr>
+										<tr _ngcontent-rkd-1="">
+											<td _ngcontent-rkd-1="" colspan="2"><strong _ngcontent-rkd-1="">Total Amount</strong></td>
+                                            <!--<td _ngcontent-rkd-1="" >1</td>-->
+                                            <td ><strong _ngcontent-rkd-1="">220</strong></td>
+                                            <td _ngcontent-rkd-1="" nowrap="">                                            
+												&nbsp;
+                                            </td>
+										</tr>										
+                                    </tbody>
+								</table>
+							</div>
+						</div> 
+	           
+						<!-- Row4 End -->
+                          
+					</div>
+				</div>
+                                       
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>
+              <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+<!-- Work Details Modal Ends -->
+
+<!-- Items Purchase Details Modal Start -->
+<div class="modal fade" id="itemsPurchased" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Items Purchased</h4>
+            </div>
+            <div class="modal-body">
+				<div class="addNewbox"> 
+					<div class="row">
+
+						<!-- Row1 start -->	
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Item Name</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Quantity</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" >  
+								<span class="input-bar"></span>
+								<label class="control-label"> Amount</label>
+								<span class="input-bar"></span>
+							</div>
+						</div>               
+						<!-- Row1 End -->
+                          
+					</div>
+				</div>
+                                       
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>
+              <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+<!-- Items Purchase Details Modal Ends -->
+
+<!-- Feedbacks/Comments Modal Start -->
+<div class="modal fade" id="feedbacks" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Feedbacks/Comments</h4>
+            </div>
+            <div class="modal-body">
+				<div class="addNewbox"> 
+					<div class="row">
+						
+						<!-- Row1 start -->
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" value="00001" readonly>  
+								<span class="input-bar"></span>
+								<label class="control-label"> Request ID</label>
+								<span class="input-bar"></span>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								&nbsp;
+							</div>
+						 </div>
+						 <div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								&nbsp;
+							</div>
+						</div>
+						<!-- Row1 End -->
+
+						
+						<!-- Row2 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="ui-input-group">        
+								<textarea required class="form-control search" cols="4" rows="6"></textarea>  
+								<span class="input-bar"></span>
+								<label class="control-label">Feedbacks/Comments</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						              
+						<!-- Row2 End -->
+
+						<!-- Row3 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="block" id="participants">
+								<h6>Feedbacks/Comments
+									<!--<button class="icon-btn pull-right addNewBtn" title="Add New" data-toggle="modal" data-target="#itemsPurchased" id="itemsPurchasedBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button>--> 
+								</h6>
+								<ul class="list participantListView">
+								  <li>Maintenance work was neat, Thank You &lt;Tenant&gt; 
+									  <div class="action-btns">
+										  <label for="C01" title="Must Reply"><input type="checkbox" id="C01" ><span class="fa fa-reply"></span></label>
+										  <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+										  <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+									  </div>
+								   </li>
+								  <li>Thank You &lt;Manager&gt; 
+									  <div class="action-btns">
+										  <label for="C01" title="Must Reply"><input type="checkbox" id="C01" ><span class="fa fa-reply"></span></label>
+										  <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+										  <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+									  </div>
+								   </li>
+								</ul>
+							</div>
+						</div> 
+						<!-- Row3 End -->
+                          
+					</div>
+				</div>
+                                       
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>
+              <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+<!-- Feedbacks/Comments Modal Ends -->
+
+<!-- Request Close Modal Start -->
+<div class="modal fade" id="requestClose" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Request Close</h4>
+            </div>
+            <div class="modal-body">
+				<div class="addNewbox"> 
+					<div class="row">
+						
+						<!-- Row1 start -->
+						<div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">        
+								<input type="text" required class="form-control search" value="00001" readonly>  
+								<span class="input-bar"></span>
+								<label class="control-label"> Request ID</label>
+								<span class="input-bar"></span>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3">
+							<div class="ui-input-group">
+								<select class="form-control">                
+									<option>--select--</option>
+									<option>New</option>
+									<option>Pending</option>
+									<option>Approved</option>
+									<option>Work in Progess</option>
+									<option>Completed</option>
+									<option>Closed</option>
+								</select>
+							  <label class="control-label">Status</label>
+							  <span class="input-bar"></span> 
+							</div>
+						</div>
+						 <div class="col-md-4 col-sm-4">
+							<div class="ui-input-group">
+								&nbsp;
+							</div>
+						</div>
+						<!-- Row1 End -->
+
+						
+						<!-- Row2 start -->	
+						<div class="col-md-12 col-sm-4">
+							<div class="ui-input-group">        
+								<textarea required class="form-control search" cols="4" rows="6"></textarea>  
+								<span class="input-bar"></span>
+								<label class="control-label">Description</label>
+								<span class="input-bar"></span>
+							</div>
+						</div> 
+						              
+						<!-- Row2 End -->
+                          
+					</div>
+				</div>
+                                       
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>
+              <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+<!-- Request Close Modal Ends -->
+
+
+<!-- jQuery --> 
+<script src="../assets/libs/jquery/jquery.js"></script> 
+<script src="../assets/js/bootstrap/bootstrap.min.js"></script> 
+<script src="../assets/js/custom.js"></script>
+</body>
+</html>

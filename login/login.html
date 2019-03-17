@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet">    
+     <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>   
+    <div class="loader-top"></div> 
+          <div class="login-bg">
+           <div class="login-container">   
+              <div class="pos-rel">  
+                   <div class="login-box animated fadeIn ">
+                    <div class="logo pull-right"></div>
+<!--                    <h4 class="login-head">ProSys</h4> -->
+                    <div class="input-area">               
+                    <form class="form-horizontal ">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="ui-input-group">        
+                                            <input type="text" required class="form-control">
+                                            <span class="input-bar"></span>
+                                            <label>Username</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="ui-input-group">        
+                                            <input type="password" required class="form-control">
+                                            <span class="input-bar"></span>
+                                            <label>Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="login-btn-pane">
+                                        <button id="loginBtn" class="ripple" onClick="location.href='../dashboard/dashboard.html'">LOGIN</button>                        
+                                    </div>
+                                </fieldset>
+                     </form>
+                      <div class="login-error">
+                         <i class="fa fa-exclamation-triangle"></i>
+                         Invalid Username or Password
+                     </div>
+                     </div>
+                 </div>                  
+                
+              </div> 
+           </div>
+           <div class="text-center login-footer">
+                <div>Copyright © 2019.All rights reserved.</div> 
+           </div>
+           </div>
+  
+    <!-- jQuery -->
+    <script src="../assets/libs/jquery/jquery.js"></script>
+    <!-- custom js -->  
+    <script src="../assets/js/custom.js"></script>
+    </body>
+</html>

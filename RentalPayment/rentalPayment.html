@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rental Payment</title>
+<!-- Bootstrap Core CSS -->
+<link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="../assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+<header class="navbar navbar-default"> 
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header fixed-brand tgl">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle"><span class="hamb-menu"><i class="hamb-icon"></i></span></button>
+    <a class="navbar-brand" href="javascript:;">ProSys  </a> </div>
+  <!-- navbar-header-->
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                         <button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> 
+                           <span class="hamb-menu" ><i class="hamb-icon"></i></span>
+                         </button>
+                        </li>
+                    </ul>                    
+                    <ul class="nav navbar-nav navbar-right hidden-xs right-nav"> 
+                      <li><a class="display-name">John Doe | Al Hilal Real Estate </a></li>
+                      <li class="dropdown">
+                         <a href="javascript:;" class="user-icons dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle-o"></i><span class="caret"></span></a>
+                         <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="">Policy & Procedures</a></li> 
+                          <li><a href="">User Manual</a></li>                        
+                          <li><a href="">Request for Support</a></li>
+                        </ul>
+                      </li>                      
+                      <li class="dropdown">                       
+                        <a href="javascript:;" class="dropdown-toggle user-icons" data-toggle="dropdown"><i class="fa fa-user-circle-o" ></i> 
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="" data-toggle="modal" data-target="#changePassword">Change Password</a></li>                        
+                          <li><a href="../login/login.html">Logout</a></li>
+                        </ul>
+                      </li>               
+                    </ul>                    
+                </div>
+  <!-- /#navbar-header --> 
+</header>
+<div id="wrapper" class="toggled-2"> 
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+        <li class="active"><a href="../dashboard/dashboard.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-desktop"></i></span>Dashboard</a></li>
+         <li><a href="../buildingRegistration/buildingRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-building" ></i></span>Building Registration</a>                </li>
+         <li><a href="../buildingRegistration/flatRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-building-o" ></i></span>Flat Registration</a>                </li>
+         <li><a href="../TenantRegistration/tenantRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-address-card-o" ></i></span>Tenant Registration</a></li>
+         <li><a href="../TenantLinking/tenantLinking.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sliders" ></i></span>Tenant Linking</a></li>
+         <li><a href="../Maintenance/maintenanceRequest.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bullhorn" ></i></span>Maintenance Request</a></li>
+         <li><a href="../RentalPayment/rentalPayment.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-money" ></i></span>Rental Payment</a></li>
+         <li><a href="../searchTenant/searchTenant.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Tenant Search</a></li>
+         <li><a href="../buildingSearch/buildingSearch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Building Search</a></li>
+         <li><a href="../flatSearch/flatSearch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Flat Search</a></li>
+         <li><a href="../Reports/buildingIncomeExpenditure.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-list" ></i></span>Financial Report</a></li>
+                <li><a href=""><span class="fa-stack fa-lg pull-left"><i class="fa fa-address-book" ></i></span>Employee Registration</a></li>
+         <li><a href=""><span class="fa-stack fa-lg pull-left"><i class="fa fa-car" ></i></span>Vehicle Registration</a></li>
+             
+       <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-circle-o"></i></span>Profile</a> </li>
+       <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sign-out"></i></span>Logout</a> </li>
+     </ul>
+  </div>
+  <!-- /#sidebar-wrapper --> 
+  <!-- Page Content -->
+  <div id="page-content-wrapper" class="animated fadeIn">
+    <h4 class="title">Rental Payment</h4>
+    <div class="inner-wrapper"> 
+      <!-- external page content-->
+      <div id="pageLoad">
+            <div class="row">
+            <div class="col-md-12 col-sm-6">
+             <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="ui-input-group">
+                  <select class="form-control">                
+                    <option>--select--</option>
+                    <option>B164-Ruwi</option>
+                    <option>B165-Mattrah</option>
+                    <option>B166-Seeb</option>
+                  </select>
+                  <label class="control-label">Select Building</label>
+                  <span class="input-bar"></span> 
+                  </div>
+              </div>     
+              <div class="col-md-3 col-sm-6">
+                <div class="ui-input-group">
+                  <select class="form-control">                
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                  </select>
+                  <label class="control-label">Select Year</label>
+                  <span class="input-bar"></span> 
+                  </div>
+              </div>    
+              <div class="col-md-3 col-sm-6">
+                    <div class="ui-input-group">
+                      <select class="form-control">                
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>JJune</option>
+                      </select>
+                      <label class="control-label">Select Month</label>
+                      <span class="input-bar"></span> 
+                      </div>
+                  </div>  
+              <div class="col-md-3 col-sm-6">
+                <div class="ui-input-group">
+                  <select class="form-control">                
+                    <option>Rent</option>
+                    </select>
+                  <label class="control-label">Select Category</label>
+                  <span class="input-bar"></span> 
+                  </div>
+              </div> 
+              </div>
+              <div class="row">
+                <table class="table">
+                  <thead>
+                  <tr>
+                      <th _ngcontent-rkd-1="" width="10%">Flat#</th>
+                      <th _ngcontent-rkd-1="" width="10%">Type#</th>
+                      <th _ngcontent-rkd-1="" width="10%">Tenant Name</th> 
+                      <th _ngcontent-rkd-1="" width="10%">Civilid</th>
+                      <th _ngcontent-rkd-1="" width="10%">Rent Amount</th>
+                      <th _ngcontent-rkd-1="" width="10%">Payment Type</th> 
+                      <th _ngcontent-rkd-1="" width="10%">Check Number</th>
+                      <th _ngcontent-rkd-1="" width="10%">Collection Date</th>
+                      <th _ngcontent-rkd-1="" width="10%">Status</th> 
+                      <th _ngcontent-rkd-1="" width="5%"></th>
+                      <th _ngcontent-rkd-1="" width="5%"></th>
+
+
+                  </tr>
+                  </thead>
+                  <tbody _ngcontent-rkd-1="">
+                  <!--template bindings={}-->
+                  <tr _ngcontent-rkd-1="">
+                          <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Flat#1</td>
+                          <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">2BHK</td>
+                          <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Abdul Gafoor</td>
+                          <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">45632145</td>
+                          <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">250 OMR</td>
+                          <td _ngcontent-rkd-1="" ><select class="form-control">                
+                            <option>Check</option>
+                            <option>Cash</option>
+                            <option>Online</option>
+                           </select></td>
+                          <td _ngcontent-rkd-1="" > <input type="text" value="123546"></td>
+                          <td _ngcontent-rkd-1="" ><input type="text" value="15/4/2018"></td>
+                          <td _ngcontent-rkd-1="" ><select class="form-control input-sm">                
+                            <option>Pending</option>
+                            <option>Deposited</option>
+                            <option>Collected</option>
+                           </select></td>
+                          <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button" title="Save Payment">Save</button></td>
+                          <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button" title="Print Receipt" title="Make New Payment"  data-toggle="modal" data-target="#rentreceipt"><i class="fa fa-print" aria-hidden="true"></i></button></td>
+                  </tr>
+                  <tr _ngcontent-rkd-1="">
+                    <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Flat#2</td>
+                    <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">1BHK</td>
+                    <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Abdul Majid</td>
+                    <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">45632145</td>
+                    <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">200 OMR</td>
+                    <td _ngcontent-rkd-1="" ><select class="form-control">                
+                      <option>Check</option>
+                      <option>Cash</option>
+                      <option>Online</option>
+                     </select></td>
+                    <td _ngcontent-rkd-1="" > <input type="text" value="123546"></td>
+                    <td _ngcontent-rkd-1="" ><input type="text" value="15/4/2018"></td>
+                    <td _ngcontent-rkd-1="" ><select class="form-control input-sm">                
+                      <option>Pending</option>
+                      <option>Deposited</option>
+                      <option>Collected</option>
+                     </select></td>
+                    <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button " title="Save Payment">Save</button></td>
+                    <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button" title="Print Receipt" title="Make New Payment"  data-toggle="modal" data-target="#rentreceipt"><i class="fa fa-print" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr _ngcontent-rkd-1="">
+              <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Flat#3</td>
+              <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">3BHK</td>
+              <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Narayanan</td>
+              <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">4533632145</td>
+              <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">280 OMR</td>
+              <td _ngcontent-rkd-1="" ><select class="form-control">                
+                <option>Check</option>
+                <option>Cash</option>
+                <option>Online</option>
+               </select></td>
+              <td _ngcontent-rkd-1="" > <input type="text" value="123546"></td>
+              <td _ngcontent-rkd-1="" ><input type="text" value="15/4/2018"></td>
+              <td _ngcontent-rkd-1="" ><select class="form-control input-sm">                
+                <option>Pending</option>
+                <option>Deposited</option>
+                <option>Collected</option>
+               </select></td>
+              <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button" title="Save Payment">Save</button></td>
+              <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button" title="Print Receipt" title="Make New Payment"  data-toggle="modal" data-target="#rentreceipt"><i class="fa fa-print" aria-hidden="true"></i></button></td>
+      </tr>
+      <tr _ngcontent-rkd-1="">
+        <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Flat#4</td>
+        <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Shop</td>
+        <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Abdul Gafoor</td>
+        <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">4563332145</td>
+        <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">350 OMR</td>
+        <td _ngcontent-rkd-1="" ><select class="form-control ">                
+          <option>Check</option>
+          <option>Cash</option>
+          <option>Online</option>
+         </select></td>
+        <td _ngcontent-rkd-1="" > <input type="text" value="123546"></td>
+        <td _ngcontent-rkd-1="" ><input type="text" value="15/4/2018"></td>
+        <td _ngcontent-rkd-1="" ><select class="form-control input-sm">                
+          <option>Pending</option>
+          <option>Deposited</option>
+          <option>Collected</option>
+         </select></td>
+        <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button" title="Save Payment">Save</button></td>
+        <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button" title="Print Receipt" title="Make New Payment"  data-toggle="modal" data-target="#rentreceipt"><i class="fa fa-print" aria-hidden="true"></i></button></td>
+</tr>
+<tr _ngcontent-rkd-1="">
+  <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Flat#5</td>
+  <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">2BHK</td>
+  <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">Abdul Gafoor</td>
+  <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">456342145</td>
+  <td _ngcontent-rkd-1=""  style="background-color: rgb(237, 237, 237)">250 OMR</td>
+  <td _ngcontent-rkd-1="" ><select class="form-control">                
+    <option>Check</option>
+    <option>Cash</option>
+    <option>Online</option>
+   </select></td>
+  <td _ngcontent-rkd-1="" > <input type="text" value="123546"></td>
+  <td _ngcontent-rkd-1="" ><input type="text" value="15/4/2018"></td>
+  <td _ngcontent-rkd-1="" ><select class="form-control input-sm">                
+    <option>Pending</option>
+    <option>Deposited</option>
+    <option>Collected</option>
+   </select></td>
+  <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button" title="Save Payment">Save</button></td>
+  <td _ngcontent-rkd-1="" ><button class="btn btn-primary ripple btn-sm" type="button" title="Print Receipt" title="Make New Payment"  data-toggle="modal" data-target="#rentreceipt"><i class="fa fa-print" aria-hidden="true"></i></button></td>
+
+</tr>
+                  
+               
+                  </tbody>
+              </table>
+
+              </div>
+   </div>
+   </div>
+
+    </div>
+ </div>
+  </div>
+  <!-- /#page-content-wrapper --> 
+  <div class="modal fade" id="rentreceipt" role="dialog">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Rent Receipt</h4>
+          </div>
+          <div class="modal-body">
+            <div class="addNewbox"> 
+                <div class="col-md-12 col-sm-6">
+                    <div class="inner-wrapper btm-mar20">
+                        <div class="text-center"><img src="../assets/img/hilal_logo.png"></div>
+                        
+                    </div>
+                  </div>  
+
+                  <div class="row">
+                      <div class="col-md-12 col-sm-6">
+                           <div class="col-md-4 col-sm-6">
+                              <div class="show-data row">
+                                  <label class="control-label col-md-6">OMR:</label>
+                                  <span class="col-md-6">250</span>
+                              </div>
+                              </div>
+                              <div class="col-md-4 col-sm-6">
+                                  <div class="show-data row">
+                                      <label class="control-label col-md-6">RECEIPT VOUCHER</label>
+                                      <span class="col-md-6"></span>
+                                  </div>
+                                  </div>
+                                  <div class="col-md-4 col-sm-6">
+                                      <div class="show-data row">
+                                          <label class="control-label col-md-6">No:</label>
+                                          <span class="col-md-6">2546</span>
+                                      </div>
+                             </div>
+                             </div>
+                             </div>
+                             <div class="row">
+                                <div class="col-md-12 col-sm-6">
+                                     <div class="col-md-4 col-sm-6">
+                                        <div class="show-data row">
+                                            <label class="control-label col-md-6"></label>
+                                            <span class="col-md-6"></span>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="show-data row">
+                                                <label class="control-label col-md-6"></label>
+                                                <span class="col-md-6"></span>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <div class="show-data row">
+                                                    <label class="control-label col-md-6"></label>
+                                                    <span class="col-md-6"></span>
+                                                </div>
+                                       </div>
+                                       </div>
+                                       </div>
+                                       <div class="row">
+                                          <div class="col-md-12 col-sm-6">
+                                               <div class="col-md-4 col-sm-6">
+                                                  <div class="show-data row">
+                                                      <label class="control-label col-md-6"></label>
+                                                      <span class="col-md-6"></span>
+                                                  </div>
+                                                  </div>
+                                                  <div class="col-md-4 col-sm-6">
+                                                      <div class="show-data row">
+                                                          <label class="control-label col-md-6"></label>
+                                                          <span class="col-md-6"></span>
+                                                      </div>
+                                                      </div>
+                                                      <div class="col-md-4 col-sm-6">
+                                                          <div class="show-data row">
+                                                              <label class="control-label col-md-6"></label>
+                                                              <span class="col-md-6"></span>
+                                                          </div>
+                                                 </div>
+                                                 </div>
+                                                 </div>
+                                                 <div class="row">
+                                                    <div class="col-md-12 col-sm-6">
+                                                         <div class="col-md-4 col-sm-6">
+                                                            <div class="show-data row">
+                                                                <label class="control-label col-md-6"></label>
+                                                                <span class="col-md-6"></span>
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6">
+                                                                <div class="show-data row">
+                                                                    <label class="control-label col-md-6"></label>
+                                                                    <span class="col-md-6"></span>
+                                                                </div>
+                                                                </div>
+                                                                <div class="col-md-4 col-sm-6">
+                                                                    <div class="show-data row">
+                                                                        <label class="control-label col-md-6"></label>
+                                                                        <span class="col-md-6"></span>
+                                                                    </div>
+                                                           </div>
+                                                           </div>
+                                                           </div>
+
+                  <div class="col-md-12 ng-star-inserted">
+                      <div class="show-data row">
+                          <label class="control-label col-md-6">Received with thanks from Mr/Mrs:</label>
+                          <span class="col-md-6">John David</span>
+                      </div>
+                  </div>       
+                  <div class="col-md-12 ng-star-inserted">
+                      <div class="show-data row">
+                          <label class="control-label col-md-6">The Sum of Rials Oman</label>
+                          <span class="col-md-6">  Two hundred and fifty </span>
+                      </div>
+                  </div>  
+                  <div class="col-md-12 ng-star-inserted">
+                      <div class="show-data row">
+                          <label class="control-label col-md-6">By Check No</label>
+                          <span class="col-md-6">56824571</span>
+                      </div>
+                  </div>   
+                  <div class="col-md-12 ng-star-inserted">
+                      <div class="show-data row">
+                          <label class="control-label col-md-6">Being Rent for the month of</label>
+                          <span class="col-md-6">May 2018</span>
+                      </div>
+                  </div>  
+                  <div class="col-md-12 ng-star-inserted">
+                      <div class="show-data row">
+                          <label class="control-label col-md-6">Flat/Showroom No:</label>
+                          <span class="col-md-6">Flat 13</span>
+                      </div>
+                  </div>  
+                    </div>          
+          </div>
+          
+        </div>
+      </div>
+    </div> 
+
+</div>
+<!-- jQuery --> 
+<script src="../assets/libs/jquery/jquery.js"></script> 
+<script src="../assets/js/bootstrap/bootstrap.min.js"></script> 
+<script src="../assets/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
+    <link href="../assets/css/style.css" rel="stylesheet">    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header fixed-brand tgl">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  id="menu-toggle">
+                      <span class="hamb-menu"><i class="hamb-icon"></i></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:;">ProSys</a>        
+                </div><!-- navbar-header-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                         <button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> 
+                           <span class="hamb-menu" ><i class="hamb-icon"></i></span>
+                         </button>
+                        </li>
+                    </ul>                    
+                    <ul class="nav navbar-nav navbar-right hidden-xs right-nav"> 
+                      <li><a class="display-name">John Doe | Al Hilal Real Estate </a></li>
+                      <li class="dropdown">
+                         <a href="javascript:;" class="user-icons dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle-o"></i><span class="caret"></span></a>
+                         <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="">Policy & Procedures</a></li> 
+                          <li><a href="">User Manual</a></li>                        
+                          <li><a href="">Request for Support</a></li>
+                        </ul>
+                      </li>                      
+                      <li class="dropdown">                       
+                        <a href="javascript:;" class="dropdown-toggle user-icons" data-toggle="dropdown"><i class="fa fa-user-circle-o" ></i> 
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="" data-toggle="modal" data-target="#changePassword">Change Password</a></li>                        
+                          <li><a href="../login/login.html">Logout</a></li>
+                        </ul>
+                      </li>               
+                    </ul>                    
+                </div><!-- /#navbar-header -->
+    </header>
+    <div id="wrapper" class="toggled-2">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+                <li class="active"><a href="../dashboard/dashboard.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-desktop"></i></span>Dashboard</a></li>
+                 <li><a href="../buildingRegistration/buildingRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-building" ></i></span>Building Registration</a>                </li>
+                 <li><a href="../buildingRegistration/flatRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-building-o" ></i></span>Flat Registration</a>                </li>
+                 <li><a href="../TenantRegistration/tenantRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-address-card-o" ></i></span>Tenant Registration</a></li>
+                 <li><a href="../TenantLinking/tenantLinking.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sliders" ></i></span>Tenant Linking</a></li>
+                 <li><a href="../Maintenance/maintenanceRequest.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bullhorn" ></i></span>Maintenance Request</a></li>
+                 <li><a href="../RentalPayment/rentalPayment.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-money" ></i></span>Rental Payment</a></li>
+                 <li><a href="../searchTenant/searchTenant.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Tenant Search</a></li>
+                 <li><a href="../buildingSearch/buildingSearch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Building Search</a></li>
+                 <li><a href="../flatSearch/flatSearch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Flat Search</a></li>
+                 <li><a href="../Reports/buildingIncomeExpenditure.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-list" ></i></span>Financial Report</a></li>
+                        <li><a href=""><span class="fa-stack fa-lg pull-left"><i class="fa fa-address-book" ></i></span>Employee Registration</a></li>
+                 <li><a href=""><span class="fa-stack fa-lg pull-left"><i class="fa fa-car" ></i></span>Vehicle Registration</a></li>
+                     
+               <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-circle-o"></i></span>Profile</a> </li>
+               <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sign-out"></i></span>Logout</a> </li>
+             </ul>
+          </div>
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="incidentReportPage animated fadeIn"> 
+             <div class="alert alert-success fix-top" >    
+                <strong>Success!</strong> You have successfully saved.
+            </div>
+             <h4 class="title">Flat Registration</h4> 
+             <nav id="lftMenu">
+                <ul>
+                    <li><a href="#reportingType"><i class="fa fa-check-circle-o"></i><span class="tooltiptext right">Reporting Type</span></a></li>
+                    <li><a href="#incidentDetails"><i class="fa fa-file-text-o"></i><span class="tooltiptext right">Incident Details</span></a></li>
+                    <li><a href="#contributoryFactors"><i class="fa fa-puzzle-piece"></i><span class="tooltiptext right">Contributory Factors</span></a></li>
+                    <li><a href="#attachments"><i class="fa fa-paperclip"></i><span class="tooltiptext right">Attachments</span></a></li>                    
+                </ul>
+             </nav>
+             <div class="inner-wrapper btm-mar">
+                    
+                    
+            <div class="row">
+                 <h5 class="sub-head" id="reportingType">Select Bulding</h5>
+                 <div class="col-md-12">
+                    <div class="row">
+                            <div class="col-md-2 col-sm-6">
+                                    <div class="ui-input-group ">        
+                                        <select class="form-control">
+                                           <option>Building1</option>
+                                           <option>Building2</option>
+                                           <option>Building3</option>
+                                        </select>
+                                        <label class="control-label">Building</label>
+                                        <span class="input-bar"></span>                                                       
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2 col-sm-6">
+                                    <div class="ui-input-group ">        
+                                        <select class="form-control">
+                                           <option>Floor1</option>
+                                           <option>Floor2</option>
+                                           <option>Floor3</option>
+                                        </select>
+                                        <label class="control-label">Floor</label>
+                                        <span class="input-bar"></span>                                                       
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2 col-sm-6">
+                                        <div class="ui-input-group">        
+                                            <input type="text" required class="form-control">
+                                            <span class="input-bar"></span>
+                                            <label>Number Of Flats</label>
+                                        </div>
+                                      </div> 
+                                <div class="col-md-6 col-sm-6">
+                                        <div><img src="../assets/img/flat-reg-matrix.jpg" class="img-responsive"  ></div>
+                                      </div> 
+                                         
+                   </div>                 
+                 </div>
+               </div> 
+             </div>
+             <div class="inner-wrapper btm-mar">
+               <div class="row btm-mar">
+					<h5 class="sub-head" id="buildingDetails">Flat Details</h5>
+                    <div class="col-md-4 col-sm-6">
+                            <div class="ui-input-group">        
+                                <input type="text" required class="form-control">
+                                <span class="input-bar"></span>
+                                <label>Flat No</label>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                                <div class="ui-input-group">        
+                                    <input type="text" required class="form-control">
+                                    <span class="input-bar"></span>
+                                    <label>Area</label>
+                                </div>
+                              </div>
+                              <div class="col-md-4 col-sm-6">
+                                    <div class="ui-input-group ">        
+                                        <select class="form-control">
+                                           <option>1BHK</option>
+                                           <option>2BHK</option>
+                                           <option>3BHK</option>
+                                           <option>Shop</option>
+                                        </select>
+                                        <label class="control-label">Floor Type</label>
+                                        <span class="input-bar"></span>                                                       
+                                    </div>
+                                  </div>
+				     <!-- <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group ">        
+                            <select class="form-control">
+                               <option>Building1</option>
+							   <option>Building2</option>
+							   <option>Building3</option>
+                            </select>
+                            <label class="control-label">Building</label>
+                            <span class="input-bar"></span>                                                       
+                        </div>
+                      </div>
+					  <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group ">        
+                            <select class="form-control">
+                               <option>Floor1</option>
+							   <option>Floor2</option>
+							   <option>Floor3</option>
+                            </select>
+                            <label class="control-label">Floor</label>
+                            <span class="input-bar"></span>                                                       
+                        </div>
+                      </div> !-->
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <input type="text" required class="form-control">
+                            <span class="input-bar"></span>
+                            <label>Number Of Rooms</label>
+                        </div>
+                      </div>
+                      
+					  <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <input type="text" required class="form-control">
+                            <span class="input-bar"></span>
+                            <label>Number Of bathrooms</label>
+                        </div>
+                      </div> 
+					  
+					  <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <input type="text" required class="form-control">
+                            <span class="input-bar"></span>
+                            <label>Water Meter No</label>
+                        </div>
+                      </div> 
+					  
+					  <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <input type="text" required class="form-control">
+                            <span class="input-bar"></span>
+                            <label>Electricity Meter No</label>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="row">
+					  <div class="col-md-8 col-sm-6">
+                        <div class="ui-input-group">        
+                            <textarea required class="form-control" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Flat Description</label>
+                        </div>
+                      </div>
+                      
+                </div>
+                   
+             </div>
+                    
+               
+             <!-- Contributory Factors -->
+             
+              <!-- Attachments -->
+             <div class="inner-wrapper btm-mar">
+               <div class="row">
+                 <h5 class="sub-head" id="attachments">Attachments</h5>
+                 <div class="col-md-12">
+                   <div class="">
+                     <div class="upload-section">   
+                        <div class="row">                
+                            <div class="col-md-3">                
+                                <h3>Select files</h3>                
+                                <div class="well my-drop-zone" ng2filedrop="">
+                                    Drop files to upload                                
+                                </div>                           
+                                <input multiple type="file" class="inputfile" id="fileUpload">   
+                                <label for="fileUpload"><span class="btn btn-primary">Browse</span></label>
+                            </div>                
+                            <div class="col-md-9" style="margin-bottom: 40px">
+                                <h3>Upload queue</h3>
+                                <p>Queue length: 1</p>   
+                                <div class="upload-list">             
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th _ngcontent-rkd-1="" width="40%">Name</th>
+                                        <th _ngcontent-rkd-1="" width="40%">Description</th>
+										<th _ngcontent-rkd-1="" width="40%">Document Type</th>
+                                        <th _ngcontent-rkd-1="">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody _ngcontent-rkd-1="">
+                                    <!--template bindings={}-->
+                                    <tr _ngcontent-rkd-1="">
+                                        <td _ngcontent-rkd-1=""><strong _ngcontent-rkd-1="">Test1.doc</strong></td>
+                                        <!--template bindings={}-->
+                                        <!--template bindings={}-->
+                                        <td _ngcontent-rkd-1="" >
+                                        Sed pulvinar volutpat placerat. Quisque vitae luctus erat.
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                        </td>
+										<td _ngcontent-rkd-1="" >
+                                              <select class="form-control input-sm">
+											   <option>Checklist</option>
+											   <option>Flat Image</option>
+											   <option>Other</option>
+											   
+											</select>
+                                        </td>
+                                        <td _ngcontent-rkd-1="" nowrap="">                                            
+                                            <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                <span class="fa fa-ban" ></span> 
+                                            </button>
+                                            <button class="btn-action delete" type="button" title="Delete">
+                                                <span class="fa fa-trash" ></span> 
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><strong _ngcontent-rkd-1="">Test2.doc</strong></td>
+                                        <!--template bindings={}-->
+                                        <!--template bindings={}-->
+                                        <td>
+                                             Quisque vitae luctus erat.
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                        </td>
+										<td _ngcontent-rkd-1="" >
+                                              <select class="form-control input sm">
+											   <option>Flat Image</option>
+											   <option>Checklist</option>
+											   <option>Other</option>
+											</select>
+                                        </td>
+                                        <td nowrap="">                                            
+                                            <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                <span class="fa fa-ban" ></span> 
+                                            </button>
+                                            <button class="btn-action delete" type="button" title="Delete">
+                                                <span class="fa fa-trash" ></span> 
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                <div>
+                                    <div>
+                                        Queue progress:
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                    <button class="btn btn-primary btn-s" type="button">
+                                        <span class="fa fa-upload"></span> Upload
+                                    </button>                                   
+                                    </div>
+                                </div>
+                          </div>              
+                        </div>    
+                    </div>    
+                 </div>                    
+                            
+                 </div>
+               </div>
+             </div>            
+             <div class="ftr-btn row ">
+                 <div class="col-md-9 col-sm-9 pull-right fixed-ftr">
+                    <div class="inner-wrapper">
+                        <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                        <button class="btn btn-primary ripple" type="button">Save</button>
+                                        <button class="btn btn-primary ripple" type="reset"> Clear</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+        <!-- /#page-content-wrapper -->  
+        
+         <!-- Add New staff/patient Modal -->
+              <div class="modal fade" id="addNewPerson" role="dialog">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Add Person</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="addNewbox"> 
+                          <div class="row">
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group btm-mar">        
+                                    <select class="form-control" id="SelectPerson">
+                                       <option selected value="staff">Staff</option>
+                                       <option value="patient">Patient</option>
+                                    </select>                                   
+                                    <span class="input-bar"></span> 
+                                    <label class="control-label">Person Type</label>
+                                </div>
+                             </div>
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <select class="form-control">
+                                       <option disabled selected>Dept</option>
+                                    </select>                                   
+                                    <span class="input-bar"></span> 
+                                </div>
+                             </div>
+                             <div class="col-md-4 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <input type="text" required class="form-control" id="searchPersonInput">  
+                                    <span class="input-bar"></span>
+                                    <label class="nameId">Enter Staff </label> 
+                               </div>
+                             </div>
+                             <div class="col-md-2 mar-tb-10">
+                               <button class="btn btn-primary btn-sm  ripple" id="searchPerson">Search</button>
+                             </div>
+                             <div class="col-md-12">
+                              <ul class="show-result"></ul>
+                             </div>
+                             </div>
+                          </div>                   
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Add</button>
+                      <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+                    </div>
+                  </div>
+                </div>
+              </div> 
+      <!-- Add Participants -->
+              <div class="modal fade" id="addParticipant" role="dialog">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Add Participant</h4>
+                    </div>
+                    <div class="modal-body min-ht">
+                      <div class="addNewbox"> 
+                          <div class="row">
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group btm-mar">        
+                                    <select class="form-control" id="SelectParticipant">
+                                       <option>Hospital 1</option>
+                                       <option>Hospital 2</option>
+                                       <option>Hospital 3</option>
+                                    </select>                                   
+                                    <span class="input-bar"></span> 
+                                    <label class="control-label">Institution</label>
+                                </div>
+                             </div>
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <input type="text" required class="form-control">  
+                                    <span class="input-bar"></span>
+                                    <label class="nameId">Dept</label> 
+                               </div>
+                             </div>
+                             <div class="col-md-4 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <input type="text" required class="form-control" id="searchParticipant">  
+                                    <span class="input-bar"></span>
+                                    <label class="nameId">Enter Staff </label> 
+                               </div>
+                               <div class="showParticipants"></div>
+                             </div>
+                             <div class="col-md-2 mar-tb-10">
+                               <button class="btn btn-primary btn-sm  ripple" id="searchParticipantBtn">Search</button>
+                             </div>
+                             <div class="col-md-12">
+                              <ul class="participantsList"></ul>
+                             </div>
+                             </div>
+                          </div>                   
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary ripple" id="addNewParticipant" data-dismiss="modal">Add</button>
+                      <button class="btn btn-default ripple"  data-dismiss="modal" >Close</button>                    
+                    </div>
+                  </div>
+                </div>
+              </div> 
+                
+        
+     
+        
+        
+    </div>
+
+    <!-- jQuery -->
+    <script src="../assets/libs/jquery/jquery.js"></script>
+    <script src="../assets/libs/scrollTo/jquery.scrollto.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="../assets/js/custom.js"></script>  
+</body>
+</html>

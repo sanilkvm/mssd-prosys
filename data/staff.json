@@ -1,0 +1,27 @@
+[
+  {
+	"id":"5482", 
+    "name":"John Doe 1",    
+	"role": "Head of Health Center"
+  },  
+  {
+	"id":"6245",
+    "name":"John Doe 2",    
+	"role": "Medical Orderly"
+  },
+  {
+	"id":"2548",
+    "name":"John Doe 3",    
+	"role": "Medical Officer In Charge"
+  },
+  {
+	"id":"6985",
+    "name":"John Doe 4",    
+	"role": "Medical Record"
+  },
+  {
+	"id":"3257",
+    "name":"John Doe 5",    
+	"role": "Medical Orderly"
+  }
+]

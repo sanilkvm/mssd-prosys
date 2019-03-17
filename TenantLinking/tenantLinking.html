@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tenant Linking</title>
+<!-- Bootstrap Core CSS -->
+<link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="../assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+<header class="navbar navbar-default"> 
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header fixed-brand tgl">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle"><span class="hamb-menu"><i class="hamb-icon"></i></span></button>
+    <a class="navbar-brand" href="javascript:;">ProSys  </a> </div>
+  <!-- navbar-header-->
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                         <button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> 
+                           <span class="hamb-menu" ><i class="hamb-icon"></i></span>
+                         </button>
+                        </li>
+                    </ul>                    
+                    <ul class="nav navbar-nav navbar-right hidden-xs right-nav"> 
+                      <li><a class="display-name">John Doe | Al Hilal Real Estate </a></li>
+                      <li class="dropdown">
+                         <a href="javascript:;" class="user-icons dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle-o"></i><span class="caret"></span></a>
+                         <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="">Policy & Procedures</a></li> 
+                          <li><a href="">User Manual</a></li>                        
+                          <li><a href="">Request for Support</a></li>
+                        </ul>
+                      </li>                      
+                      <li class="dropdown">                       
+                        <a href="javascript:;" class="dropdown-toggle user-icons" data-toggle="dropdown"><i class="fa fa-user-circle-o" ></i> 
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="" data-toggle="modal" data-target="#changePassword">Change Password</a></li>                        
+                          <li><a href="../login/login.html">Logout</a></li>
+                        </ul>
+                      </li>               
+                    </ul>                    
+                </div>
+  <!-- /#navbar-header --> 
+</header>
+<div id="wrapper" class="toggled-2"> 
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+        <li class="active"><a href="../dashboard/dashboard.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-desktop"></i></span>Dashboard</a></li>
+         <li><a href="../buildingRegistration/buildingRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-building" ></i></span>Building Registration</a>                </li>
+         <li><a href="../buildingRegistration/flatRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-building-o" ></i></span>Flat Registration</a>                </li>
+         <li><a href="../TenantRegistration/tenantRegistration.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-address-card-o" ></i></span>Tenant Registration</a></li>
+         <li><a href="../TenantLinking/tenantLinking.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sliders" ></i></span>Tenant Linking</a></li>
+         <li><a href="../Maintenance/maintenanceRequest.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bullhorn" ></i></span>Maintenance Request</a></li>
+         <li><a href="../RentalPayment/rentalPayment.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-money" ></i></span>Rental Payment</a></li>
+         <li><a href="../searchTenant/searchTenant.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Tenant Search</a></li>
+         <li><a href="../buildingSearch/buildingSearch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Building Search</a></li>
+         <li><a href="../flatSearch/flatSearch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search" ></i></span>Flat Search</a></li>
+         <li><a href="../Reports/buildingIncomeExpenditure.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-list" ></i></span>Financial Report</a></li>
+                <li><a href=""><span class="fa-stack fa-lg pull-left"><i class="fa fa-address-book" ></i></span>Employee Registration</a></li>
+         <li><a href=""><span class="fa-stack fa-lg pull-left"><i class="fa fa-car" ></i></span>Vehicle Registration</a></li>
+             
+       <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-circle-o"></i></span>Profile</a> </li>
+       <li class="visible-xs"> <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sign-out"></i></span>Logout</a> </li>
+     </ul>
+  </div>
+  <!-- /#sidebar-wrapper --> 
+  <!-- Page Content -->
+  <div id="page-content-wrapper" class="animated fadeIn">
+    <h4 class="title">Tenant Linking</h4>
+    <div class="inner-wrapper btm-mar"> 
+      <!-- external page content-->
+      <div id="pageLoad">
+        <div class="row">
+        <div class="col-md-6 col-sm-6">
+         <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>--select--</option>
+                <option>B164-Ruwi</option>
+                <option>B165-Mattrah</option>
+                <option>B166-Seeb</option>
+              </select>
+              <label class="control-label">Select Building</label>
+              <span class="input-bar"></span> 
+              </div>
+          </div>     
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>--select--</option>
+                <option>Floor1</option>
+                <option>Floor2</option>
+                <option>Floor3</option>
+              </select>
+              <label class="control-label">Select Floor</label>
+              <span class="input-bar"></span> 
+              </div>
+          </div> 
+          <div class="col-md-4 col-sm-6">
+            <div class="ui-input-group">
+              <select class="form-control">                
+                <option>--select--</option>
+                <option>Abdul Gafoor -- 15263485</option>
+                <option>Haitham -- 15268785</option>
+                <option>John David -- 15254485</option>
+              </select>
+              <label class="control-label">Select Tenant</label>
+              <span class="input-bar"></span> 
+              </div>
+          </div>    
+    
+          </div>
+          <div class="row">
+                <div class="col-md-4 col-sm-4">
+                        <div class="ui-input-group btm-space">        
+                              <input type="text" required class="form-control search" >  
+                              <span class="input-bar"></span>
+                              <label class="control-label"> Tenancy Date </label>
+                              <span class="input-bar"></span>
+                          </div>
+                        </div>  
+                <div class="col-md-4 col-sm-4">
+                        <div class="ui-input-group btm-space">        
+                              <input type="text" required class="form-control search" >  
+                              <span class="input-bar"></span>
+                              <label class="control-label"> Advance Amount </label>
+                              <span class="input-bar"></span>
+                          </div>
+                        </div>    
+                        <div class="col-md-4 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                      <input type="text" required class="form-control search" >  
+                                      <span class="input-bar"></span>
+                                      <label class="control-label"> Advance Date </label>
+                                      <span class="input-bar"></span>
+                                  </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                      <input type="text" required class="form-control search" >  
+                                      <span class="input-bar"></span>
+                                      <label class="control-label"> Water Meter Reading </label>
+                                      <span class="input-bar"></span>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                        <div class="ui-input-group btm-space">        
+                                              <input type="text" required class="form-control search" >  
+                                              <span class="input-bar"></span>
+                                              <label class="control-label"> Electricity Meter Reading </label>
+                                              <span class="input-bar"></span>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                                <div class="ui-input-group">
+                                                  <select class="form-control">                
+                                                    <option>--select--</option>
+                                                    <option>Check List 1</option>
+                                                    <option>Check List 2</option>
+                                                  </select>
+                                                  <label class="control-label">Select Check List</label>
+                                                  <span class="input-bar"></span> 
+                                                  </div>
+                                              </div> 
+                </div>
+                
+            
+            <div class="row">
+                    <div class="col-md-9 col-sm-9 pull-right fixed-ftr">
+                      <!--  <div class="inner-wrapper"> -->
+                           <div class="row">
+                                   
+                                   <div class="col-md-12 col-sm-6 col-xs-6 text-right">
+                                           <button class="btn btn-primary ripple" type="button" title="Link Tenant to Flat">Save</button>
+                                           <button class="btn btn-primary ripple" type="button" title="Leaving Future Date">Exp Leaving Date</button>
+                                           <button class="btn btn-primary ripple" type="button" title="End Contract">End Contract</button>
+                                           <button class="btn btn-primary ripple" type="reset"> Clear</button>
+                                   </div>
+                          <!--  </div> -->
+                       </div>
+                   </div>
+                  </div>
+          </div>
+        <div class="col-md-4 col-sm-6">
+         <div class="col-md-12 col-sm-6">
+            <div class="inner-wrapper btm-mar20">
+                <h4>B164-Ruwi</h4>
+                <div  style="width:110px; margin-bottom:20px"><img src="../assets/img/flat.jpg" class="img-responsive"></div>
+                <div><img src="../assets/img/tenant-linking-matrix.jpg" class="img-responsive"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+                <div class="row">
+                        <div class="col-md-12 ng-star-inserted">
+                                <div class="show-data row">
+                                    <label class="control-label col-md-6">Flat #</label>
+                                    <span class="col-md-6">F45</span>
+                                </div>
+                            </div>  
+                            </div>
+                              <div class="row">
+                <div class="col-md-12 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Flat Type#</label>
+                            <span class="col-md-6">2BHK</span>
+                        </div>
+                    </div>  
+                    </div>
+               
+                <div class="row">
+                <div class="col-md-12 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Bathrooms#</label>
+                            <span class="col-md-6">2</span>
+                        </div>
+                    </div>  
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12 ng-star-inserted">
+                                    <div class="show-data row">
+                                        <label class="control-label col-md-6">Area#</label>
+                                        <span class="col-md-6">800sqft</span>
+                                    </div>
+                                </div>  
+                                </div>
+                    <div class="row">
+                            <div class="col-md-12 ng-star-inserted">
+                                    <div class="show-data row">
+                                        <label class="control-label col-md-6">Vacant Date:</label>
+                                        <span class="col-md-6">25/02/2020</span>
+                                    </div>
+                                </div>  
+                                </div>
+        </div>
+          </div>
+          
+</div>
+         </div>
+
+        <div class="inner-wrapper btm-mar">
+        <div class="row ">
+                <h5 class="sub-head" id="incidentDetails">Tenant Details</h5>
+          <div class="col-md-4 ng-star-inserted">
+            <div class="show-data row">
+                <label class="control-label col-md-6">Tenant Name:</label>
+                <span class="col-md-6">John David</span>
+            </div>
+        </div>    
+        <div class="col-md-4 ng-star-inserted">
+          <div class="show-data row">
+              <label class="control-label col-md-6">Address:</label>
+              <span class="col-md-6">Al Kuwair</span>
+          </div>
+      </div>    
+      <div class="col-md-4 ng-star-inserted">
+        <div class="show-data row">
+            <label class="control-label col-md-6">Company Name:</label>
+            <span class="col-md-6">Omasco</span>
+        </div>
+        
+    </div>    
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4 ng-star-inserted">
+            <div class="show-data row">
+                <label class="control-label col-md-6">Mobile No:</label>
+                <span class="col-md-6">98745632</span>
+            </div>
+        </div>    
+        <div class="col-md-4 ng-star-inserted">
+          <div class="show-data row">
+              <label class="control-label col-md-6">Email:</label>
+              <span class="col-md-6">sdf@gmail.com</span>
+          </div>
+      </div>    
+      <div class="col-md-4 ng-star-inserted">
+        <div class="show-data row">
+            <label class="control-label col-md-6">ID card#:</label>
+            <span class="col-md-6">12546327</span>
+        </div>
+        
+    </div>    
+        </div>
+        <div class="row">
+          <div class="col-md-4 ng-star-inserted">
+            <div class="show-data row">
+                <label class="control-label col-md-6">Tenancy Start Date:</label>
+                <span class="col-md-6">Feb 26, 2017</span>
+            </div>
+        </div>   
+        </div>
+        </div>
+        <div class="inner-wrapper btm-mar">
+               <!--  <h5 class="sub-head" id="incidentDetails">Tenant Belongis</h5> -->
+          <div class="row">
+            <div class="col-md-12">
+               <div class="pull-right expand-panel"> 
+                   <a id="expandAll" href="javasritpt:void;"  role="button">Expand All</a>
+               </div>
+           </div>
+          
+            <div class="col-md-12">
+              <div class="panel-group" id="accordion">
+                   <div class="panel panel-default">
+                       <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#collapseOne">
+                            <h4 class="panel-title"> Contracts </h4>
+                       </div>
+                       <div id="collapseOne" class="panel-collapse collapse">
+                           <div class="panel-body">
+                            <div class="row">
+                              <div class="col-md-2 ng-star-inserted">
+                                <div class="show-data row">
+                                    <label class="control-label col-md-6">Contract Id:</label>
+                                    <span class="col-md-6">C786534</span>
+                                </div>
+                            </div>    
+                            <div class="col-md-2 ng-star-inserted">
+                              <div class="show-data row">
+                                  <label class="control-label col-md-6">Active From:</label>
+                                  <span class="col-md-6">Feb 26, 2017</span>
+                              </div>
+                          </div>    
+                            <div class="col-md-2 ng-star-inserted">
+                              <div class="show-data row">
+                                  <label class="control-label col-md-6">Active To</label>
+                                  <span class="col-md-6">Feb 26, 2019</span>
+                              </div>
+                          </div>    
+                          <div class="col-md-3 ng-star-inserted">
+                            <div class="show-data row">
+                                <label class="control-label col-md-6">Rent Amount:</label>
+                                <span class="col-md-6">250 OMR</span>
+                            </div>
+                            
+                        </div>       <div class="col-md-3 ng-star-inserted">
+                                <div class="show-data row">
+                                    <label class="control-label col-md-6">Payment Type:</label>
+                                    <span class="col-md-6">PDC</span>
+                                </div>
+                                
+                            </div>
+
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-4 col-sm-6"></div>
+                                    <div class="col-md-4 col-sm-6">
+                                            <div class="col-md-12 col-sm-6">
+                                               <div class="inner-wrapper btm-mar20">
+                                                  <!--  <h4>B164-Ruwi</h4> -->
+                                                   <div class="text-center"><img src="../assets/img/contract.png"></div>
+                                                   
+                                               </div>
+                                             </div>
+                                           </div> 
+                                           <div class="col-md-4 col-sm-6"></div>    
+        
+                              </div>
+                           </div>
+                           <div class="inner-wrapper btm-mar">
+                            <div class="row">
+                              <h5 class="sub-head" id="attachments">Previous Contracts <button class="icon-btn pull-right addNewBtn" title="Add New"  data-toggle="modal" data-target="#addNewContract" id="personAffectedBtn" data-backdrop="static"><i class="fa fa-user-plus"></i></button></h5>
+                              <div class="col-md-12">
+                                <div class="">
+                                  <div class="upload-section">   
+                                     <div class="row">                
+                                     <!--     <div class="col-md-3">                
+                                             <h3>Select files</h3>                
+                                             <div class="well my-drop-zone" ng2filedrop="">
+                                                 Drop files to upload                                
+                                             </div>                           
+                                             <input multiple type="file" class="inputfile" id="fileUpload">   
+                                             <label for="fileUpload"><span class="btn btn-primary">Browse</span></label>
+                                         </div>   -->              
+                                         <div class="col-md-12" style="margin-bottom: 40px">
+                                            <!--  <h3>Upload queue</h3> -->
+                                             <p>No Of Contracts: 3</p>   
+                                             <div class="upload-list">             
+                                             <table class="table">
+                                                 <thead>
+                                                 <tr>
+                                                     <th _ngcontent-rkd-1="" width="40%">Contract Id</th>
+                                                     <th _ngcontent-rkd-1="" width="40%">Contract Year</th> 
+                                                     <th _ngcontent-rkd-1="">Image</th>
+                                                     <th _ngcontent-rkd-1="">Actions</th>
+                                                 </tr>
+                                                 </thead>
+                                                 <tbody _ngcontent-rkd-1="">
+                                                 <!--template bindings={}-->
+                                                 <tr _ngcontent-rkd-1="">
+                                                     <td _ngcontent-rkd-1=""><strong _ngcontent-rkd-1="">Contract1.doc</strong></td>
+                                                     <!--template bindings={}-->
+                                                     <!--template bindings={}-->
+                                                     <td _ngcontent-rkd-1="" >
+                                                    Feb-2017 to Jan-2018
+                                                         <!--template bindings={}-->
+                                                         <!--template bindings={}-->
+                                                         <!--template bindings={}-->
+                                                     </td>
+                                                     <td><img src="../assets/img/date.png"></td>
+                                                     <td _ngcontent-rkd-1="" nowrap="">                                            
+                                                         <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                             <span class="fa fa-ban" ></span> 
+                                                         </button>
+                                                         <button class="btn-action delete" type="button" title="Delete">
+                                                             <span class="fa fa-trash" ></span> 
+                                                         </button>
+                                                     </td>
+                                                 </tr>
+                                                 
+                                                 <tr>
+                                                     <td><strong _ngcontent-rkd-1="">Contract2.doc</strong></td>
+                                                     <!--template bindings={}-->
+                                                     <!--template bindings={}-->
+                                                     <td>
+                                                      Feb-2018 to Jan-2019
+                                                         <!--template bindings={}-->
+                                                         <!--template bindings={}-->
+                                                         <!--template bindings={}-->
+                                                     </td>
+                                                     <td><img src="../assets/img/date.png"></td>
+                                                     <td nowrap="">                                            
+                                                         <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                             <span class="fa fa-ban" ></span> 
+                                                         </button>
+                                                         <button class="btn-action delete" type="button" title="Delete">
+                                                             <span class="fa fa-trash" ></span> 
+                                                         </button>
+                                                     </td>
+                                                 </tr>
+                                                 </tbody>
+                                             </table>
+                                             </div>
+                                             <div>
+                                                 <!-- <div>
+                                                     Queue progress:
+                                                     <div class="progress">
+                                                         <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                                                     </div>
+                                                 </div> -->
+                                                <!--  <div class="text-right">
+                                                 <button class="btn btn-primary btn-s" type="button">
+                                                     <span class="fa fa-upload"></span> Upload
+                                                 </button>                                   
+                                                 </div> -->
+                                             </div>
+                                       </div>              
+                                     </div>    
+                                 </div>    
+                              </div>                    
+                                         
+                              </div>
+                            </div>
+                          </div> 
+                       </div>
+                   </div>
+                   <div class="panel panel-default">
+                    <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#collapseTwo">
+                         <h4 class="panel-title"> Electricity</h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                         <div class="row">
+                           <div class="col-md-3 ng-star-inserted">
+                             <div class="show-data row">
+                                 <label class="control-label col-md-6">Meter No:</label>
+                                 <span class="col-md-6">3066550</span>
+                             </div>
+                         </div>    
+                         <div class="col-md-3 ng-star-inserted">
+                           <div class="show-data row">
+                               <label class="control-label col-md-6">Account No:</label>
+                               <span class="col-md-6">R41706</span>
+                           </div>
+                       </div>    
+                         <div class="col-md-3 ng-star-inserted">
+                           <div class="show-data row">
+                               <label class="control-label col-md-6">Consumer No:</label>
+                               <span class="col-md-6">R41706P</span>
+                           </div>
+                       </div>    
+                       <div class="col-md-3 ng-star-inserted">
+                         <div class="show-data row">
+                             <label class="control-label col-md-6">Inital Reading:</label>
+                             <span class="col-md-6">44949</span>
+                         </div>
+                         
+                     </div>    
+                         </div>
+                         <div class="row">
+                                <div class="col-md-3 ng-star-inserted">
+                                        <div class="show-data row">
+                                            <label class="control-label col-md-6">Outstanding Amt:</label>
+                                            <span class="col-md-6">25.000 OMR</span>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-3 ng-star-inserted">
+                                                <div class="show-data row">
+                                                    <label class="control-label col-md-6">Last Payment Date:</label>
+                                                    <span class="col-md-6">25/8/2018</span>
+                                                </div>
+                                                </div>
+                                                <div class="col-md-3 ng-star-inserted">
+                                                        <div class="show-data row">
+                                                            <label class="control-label col-md-6">Last Payment Amt:</label>
+                                                            <span class="col-md-6">25.000 OMR</span>
+                                                        </div>
+                                                        </div>
+                                                <div class="col-md-3 ng-star-inserted">
+                                                        <div class="show-data row">
+                                                                <a target="_blank" href="https://eservice.oifcoman.com/indvidual.aspx?lang=en"><span class="fa-stack fa-lg pull-left"><i class="fa fa-pencil-square-o" ></i></span>View and Pay Bill</a>                
+                                                        </div>
+</div>
+                                                
+                             </div>
+                        
+                       
+                    </div>
+                </div>
+                 </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#collapseThree">
+                       <h4 class="panel-title"> Water</h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-3 ng-star-inserted">
+                          <div class="show-data row">
+                              <label class="control-label col-md-6">Meter No:</label>
+                              <span class="col-md-6">B16VA004195ADDG</span>
+                          </div>
+                      </div>    
+                      <div class="col-md-3 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Account No:</label>
+                            <span class="col-md-6">5904030000</span>
+                        </div>
+                    </div>    
+                      <div class="col-md-3 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Consumer No:</label>
+                            <span class="col-md-6">C33417</span>
+                        </div>
+                    </div>    
+                    <div class="col-md-3 ng-star-inserted">
+                      <div class="show-data row">
+                          <label class="control-label col-md-6">Inital Reading:</label>
+                          <span class="col-md-6">25.000 OMR</span>
+                      </div>
+                      
+                  </div>    
+                      </div> 
+                      <div class="row">
+                            <div class="col-md-3 ng-star-inserted">
+                                    <div class="show-data row">
+                                        <label class="control-label col-md-6">Outstanding Amt:</label>
+                                        <span class="col-md-6">25.000 OMR</span>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-3 ng-star-inserted">
+                                            <div class="show-data row">
+                                                <label class="control-label col-md-6">Last Payment Date:</label>
+                                                <span class="col-md-6">25/8/2018</span>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-3 ng-star-inserted">
+                                                    <div class="show-data row">
+                                                        <label class="control-label col-md-6">Last Payment Amt:</label>
+                                                        <span class="col-md-6">25.000 OMR</span>
+                                                    </div>
+                                                    </div>
+                                            <div class="col-md-3 ng-star-inserted">
+                                                    <div class="show-data row">
+                                                            <a target="_blank" href="https://eservice.oifcoman.com/indvidual.aspx?lang=en"><span class="fa-stack fa-lg pull-left"><i class="fa fa-pencil-square-o" ></i></span>View and Pay Bill</a>                
+                                                    </div>
+</div>
+                                            
+                         </div>
+                   
+                     </div>
+            
+                  </div>
+              </div>
+                   <div class="panel panel-default">
+                       <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#collapseFour">
+                            <h4 class="panel-title">Payment</h4>
+                       </div>
+                       <div id="collapseFour" class="panel-collapse collapse" style="height: 0px;">
+                           <div class="panel-body">
+                                <h5 class="sub-head" id="attachments"> <button class="icon-btn pull-right addNewBtn" title="Make New Payment"  data-toggle="modal" data-target="#addNewPayment" id="paymentBtn" data-backdrop="static"><i class="fa fa-user-plus"></i></button></h5>
+                            <div class="row">
+                                    <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th _ngcontent-rkd-1="" width="10%">Category</th>
+                                                <th _ngcontent-rkd-1="" width="10%">Rent Towards</th> 
+                                                <th _ngcontent-rkd-1="" width="10%">Date</th>
+                                                <th _ngcontent-rkd-1="" width="10%">Amount</th>
+                                                <th _ngcontent-rkd-1="" width="10%">Payment Type</th> 
+                                                <th _ngcontent-rkd-1="" width="10%">Check Number</th>
+                                                <th _ngcontent-rkd-1="" width="10%">Collection Date</th>
+                                                <th _ngcontent-rkd-1="" width="10%">Status</th> 
+                                                <th _ngcontent-rkd-1="" width="10%">Edit</th>
+
+
+                                            </tr>
+                                            </thead>
+                                            <tbody _ngcontent-rkd-1="">
+                                            <!--template bindings={}-->
+                                            <tr _ngcontent-rkd-1="">
+                                                    <td _ngcontent-rkd-1="" >Rent</td>
+                                                    <td _ngcontent-rkd-1="" >April 2018</td>
+                                                    <td _ngcontent-rkd-1="" >15/4/2018</td>
+                                                    <td _ngcontent-rkd-1="" >250 OMR</td>
+                                                    <td _ngcontent-rkd-1="" >Check</td>
+                                                    <td _ngcontent-rkd-1="" >123546</td>
+                                                    <td _ngcontent-rkd-1="" >15/4/2018</td>
+                                                    <td _ngcontent-rkd-1="" >Collected</td>
+                                                    <td _ngcontent-rkd-1="" >Edit</td>
+                                            </tr>
+                                            <tr _ngcontent-rkd-1="">
+                                                    <td _ngcontent-rkd-1="" >Rent</td>
+                                                    <td _ngcontent-rkd-1="" >May 2018</td>
+                                                    <td _ngcontent-rkd-1="" >15/45/2018</td>
+                                                    <td _ngcontent-rkd-1="" >250 OMR</td>
+                                                    <td _ngcontent-rkd-1="" >Check</td>
+                                                    <td _ngcontent-rkd-1="" >1235467</td>
+                                                    <td _ngcontent-rkd-1="" >15/4/2018</td>
+                                                    <td _ngcontent-rkd-1="" >Deposited</td>
+                                                    <td _ngcontent-rkd-1="" >Edit</td>
+                                            </tr>
+                                            <tr _ngcontent-rkd-1="">
+                                                    <td _ngcontent-rkd-1="" >Rent</td>
+                                                    <td _ngcontent-rkd-1="" >June 2018</td>
+                                                    <td _ngcontent-rkd-1="" >15/5/2018</td>
+                                                    <td _ngcontent-rkd-1="" >250 OMR</td>
+                                                    <td _ngcontent-rkd-1="" >Check</td>
+                                                    <td _ngcontent-rkd-1="" >1235468</td>
+                                                    <td _ngcontent-rkd-1="" >15/4/2018</td>
+                                                    <td _ngcontent-rkd-1="" >Pending</td>
+                                                    <td _ngcontent-rkd-1="" >Edit</td>
+                                            </tr>
+                                            <tr _ngcontent-rkd-1="">
+                                                    <td _ngcontent-rkd-1="" >Rent</td>
+                                                    <td _ngcontent-rkd-1="" >July 2018</td>
+                                                    <td _ngcontent-rkd-1="" >15/5/2018</td>
+                                                    <td _ngcontent-rkd-1="" >250 OMR</td>
+                                                    <td _ngcontent-rkd-1="" >Check</td>
+                                                    <td _ngcontent-rkd-1="" >1235469</td>
+                                                    <td _ngcontent-rkd-1="" >15/4/2018</td>
+                                                    <td _ngcontent-rkd-1="" >Pending</td>
+                                                    <td _ngcontent-rkd-1="" >Edit</td>
+                                            </tr>
+                                            
+                                         
+                                            </tbody>
+                                        </table>
+                              
+                            </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="panel panel-default">
+                    <div class="panel-heading panelExpand" data-toggle="collapse" data-parent="#accordion" data-href="#collapseFive">
+                         <h4 class="panel-title"> Maintenance</h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <div class="row">
+                                    <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th _ngcontent-rkd-1="" width="8%">Reuest Id</th>
+                                                <th _ngcontent-rkd-1="" width="26%">Description</th> 
+                                                <th _ngcontent-rkd-1="" width="8%">Created Date</th>
+                                                <th _ngcontent-rkd-1="" width="8%">Created By</th>
+                                                <th _ngcontent-rkd-1="" width="8%">Ack Date</th>
+                                                <th _ngcontent-rkd-1="" width="8%">Ack By</th> 
+                                                <th _ngcontent-rkd-1="" width="10%">Status</th>
+                                                <th _ngcontent-rkd-1="" width="8%">Compld Date</th>
+                                                <th _ngcontent-rkd-1="" width="8%">Compld By</th> 
+                                                <th _ngcontent-rkd-1="" width="8%">Amount</th>
+
+
+                                            </tr>
+                                            </thead>
+                                            <tbody _ngcontent-rkd-1="">
+                                            <!--template bindings={}-->
+                                            <tr _ngcontent-rkd-1="">
+                                                    <td _ngcontent-rkd-1="" >R5632</td>
+                                                    <td _ngcontent-rkd-1="" >AC Not working</td>
+                                                    <td _ngcontent-rkd-1="" >30/4/2018</td>
+                                                    <td _ngcontent-rkd-1="" >Abdul Gafoor</td>
+                                                    <td _ngcontent-rkd-1="" >2/5/2018</td>
+                                                    <td _ngcontent-rkd-1="" >Shamir Mohammed</td>
+                                                    <td _ngcontent-rkd-1="" >Accepted</td>
+                                                    <td _ngcontent-rkd-1="" >13/5/2018</td>
+                                                    <td _ngcontent-rkd-1="" >Althaf</td>
+                                                    <td _ngcontent-rkd-1="" >25 OMR</td>
+                                            </tr>
+                                            <tr _ngcontent-rkd-1="">
+                                                    <td _ngcontent-rkd-1="" >R5632</td>
+                                                    <td _ngcontent-rkd-1="" >Electric Swich complaint</td>
+                                                    <td _ngcontent-rkd-1="" >30/4/2017</td>
+                                                    <td _ngcontent-rkd-1="" >Abdul Gafoor</td>
+                                                    <td _ngcontent-rkd-1="" >2/5/2017</td>
+                                                    <td _ngcontent-rkd-1="" >Jayaraj</td>
+                                                    <td _ngcontent-rkd-1="" >Accepted</td>
+                                                    <td _ngcontent-rkd-1="" >13/5/2017</td>
+                                                    <td _ngcontent-rkd-1="" >Gopinath</td>
+                                                    <td _ngcontent-rkd-1="" >5 OMR</td>
+                                            </tr>
+                                            
+                                            
+                                         
+                                            </tbody>
+                                        </table>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
+              
+                 
+                       
+            </div>
+          </div>
+        </div>
+     
+      </div>
+   
+ 
+  </div>
+  <!-- /#page-content-wrapper --> 
+  
+     <!-- Add New Contract Modal -->
+     <div class="modal fade" id="addNewContract" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">New Contract</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="addNewbox"> 
+                      <div class="row">
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                        <input type="text" required class="form-control search" >  
+                                        <span class="input-bar"></span>
+                                        <label class="control-label"> Contract No </label>
+                                        <span class="input-bar"></span>
+                                    </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                        <input type="text" required class="form-control search" >  
+                                        <span class="input-bar"></span>
+                                        <label class="control-label"> Active From </label>
+                                        <span class="input-bar"></span>
+                                    </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                        <input type="text" required class="form-control search" >  
+                                        <span class="input-bar"></span>
+                                        <label class="control-label"> Active To </label>
+                                        <span class="input-bar"></span>
+                                    </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                        <input type="text" required class="form-control search" >  
+                                        <span class="input-bar"></span>
+                                        <label class="control-label"> Rent Amt </label>
+                                        <span class="input-bar"></span>
+                                    </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group  btm-space">
+                                        <select class="form-control search">                
+                                          <option>--select--</option>
+                                          <option>Cas</option>
+                                          <option>Online</option>
+                                          <option>PDC</option>
+                                        </select>
+                                        <label class="control-label">Payment Type</label>
+                                        <span class="input-bar"></span> 
+                                        </div>
+                         </div>
+                        
+                         <!-- <div class="col-md-12">
+                          <ul class="show-result"></ul>
+                         </div> -->
+                         </div>
+                         <div class="row">                
+                                <div class="col-md-3">                
+                                    <h3>Select files</h3>                
+                                    <div class="well my-drop-zone" ng2filedrop="">
+                                        Drop files to upload                                
+                                    </div>                           
+                                    <input multiple type="file" class="inputfile" id="fileUpload">   
+                                    <label for="fileUpload"><span class="btn btn-primary">Browse</span></label>
+                                </div>                
+                                <div class="col-md-9" style="margin-bottom: 40px">
+                                   <!--  <h3>Upload queue</h3> -->
+                                   <!--  <p>No Of Contracts: 1</p>    -->
+                                    <div class="upload-list">             
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th _ngcontent-rkd-1="" width="40%">Name</th>
+                                            <th _ngcontent-rkd-1="" width="40%">Description</th> 
+                                            <th _ngcontent-rkd-1="">Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody _ngcontent-rkd-1="">
+                                        <!--template bindings={}-->
+                                        <tr _ngcontent-rkd-1="">
+                                            <td _ngcontent-rkd-1=""><strong _ngcontent-rkd-1="">Contract.doc</strong></td>
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                            <td _ngcontent-rkd-1="" >
+                                           Feb-2017 to Jan-2018
+                                                <!--template bindings={}-->
+                                                <!--template bindings={}-->
+                                                <!--template bindings={}-->
+                                            </td>
+                                            <td _ngcontent-rkd-1="" nowrap="">                                            
+                                                <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                    <span class="fa fa-ban" ></span> 
+                                                </button>
+                                                <button class="btn-action delete" type="button" title="Delete">
+                                                    <span class="fa fa-trash" ></span> 
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                    <div>
+                                        <!-- <div>
+                                            Queue progress:
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                                            </div>
+                                        </div> -->
+                                        <div class="text-right">
+                                        <button class="btn btn-primary btn-s" type="button">
+                                            <span class="fa fa-upload"></span> Upload
+                                        </button>                                   
+                                        </div>
+                                    </div>
+                              </div>              
+                            </div>                   
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>
+                  <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+                </div>
+              </div>
+            </div>
+          </div> 
+</div>
+
+   <!-- Add New Payment Modal -->
+   <div class="modal fade" id="addNewPayment" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">New Payment</h4>
+            </div>
+            <div class="modal-body">
+              <div class="addNewbox"> 
+                  <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group  btm-space">
+                                        <select class="form-control search">                
+                                          <option>--select--</option>
+                                          <option>Rent</option>
+                                          <option>Advance</option>
+                                          <option>Other</option>
+                                        </select>
+                                        <label class="control-label">Category</label>
+                                        <span class="input-bar"></span> 
+                                        </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group  btm-space">
+                                        <select class="form-control search">                
+                                          <option>--select--</option>
+                                          <option>April 2018</option>
+                                          <option>May 2018</option>
+                                          <option>June 2018</option>
+                                        </select>
+                                        <label class="control-label">Towards</label>
+                                        <span class="input-bar"></span> 
+                                        </div>
+                         </div> <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                        <input type="text" required class="form-control search" >  
+                                        <span class="input-bar"></span>
+                                        <label class="control-label"> Date </label>
+                                        <span class="input-bar"></span>
+                                    </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                        <input type="text" required class="form-control search" >  
+                                        <span class="input-bar"></span>
+                                        <label class="control-label"> Amount </label>
+                                        <span class="input-bar"></span>
+                                    </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group  btm-space">
+                                        <select class="form-control search">                
+                                          <option>--select--</option>
+                                          <option>Cash</option>
+                                          <option>Online</option>
+                                          <option>PDC</option>
+                                        </select>
+                                        <label class="control-label">Payment Type</label>
+                                        <span class="input-bar"></span> 
+                                        </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                        <input type="text" required class="form-control search" >  
+                                        <span class="input-bar"></span>
+                                        <label class="control-label"> Check No </label>
+                                        <span class="input-bar"></span>
+                                    </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group btm-space">        
+                                        <input type="text" required class="form-control search" >  
+                                        <span class="input-bar"></span>
+                                        <label class="control-label"> Collection Date </label>
+                                        <span class="input-bar"></span>
+                                    </div>
+                         </div>
+                         <div class="col-md-3 col-sm-4">
+                                <div class="ui-input-group  btm-space">
+                                        <select class="form-control search">                
+                                          <option>--select--</option>
+                                          <option>Pending</option>
+                                          <option>Deposited</option>
+                                          <option>Collected</option>
+                                        </select>
+                                        <label class="control-label">Status</label>
+                                        <span class="input-bar"></span> 
+                                        </div>
+                         </div>                        
+
+                           
+                     </div>
+                    
+                     </div>
+                     <div class="row">                
+                            <div class="col-md-3">                
+                                <h3>Select files</h3>                
+                                <div class="well my-drop-zone" ng2filedrop="">
+                                    Drop checks to upload                                
+                                </div>                           
+                                <input multiple type="file" class="inputfile" id="fileUpload">   
+                                <label for="fileUpload"><span class="btn btn-primary">Browse</span></label>
+                            </div>                
+                            <div class="col-md-9" style="margin-bottom: 40px">
+                               <!--  <h3>Upload queue</h3> -->
+                               <!--  <p>No Of Contracts: 1</p>    -->
+                                <div class="upload-list">             
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th _ngcontent-rkd-1="" width="40%">Name</th>
+                                        <th _ngcontent-rkd-1="" width="40%">Description</th> 
+                                        <th _ngcontent-rkd-1="">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody _ngcontent-rkd-1="">
+                                    <!--template bindings={}-->
+                                    <tr _ngcontent-rkd-1="">
+                                        <td _ngcontent-rkd-1=""><strong _ngcontent-rkd-1="">Check1.doc</strong></td>
+                                        <!--template bindings={}-->
+                                        <!--template bindings={}-->
+                                        <td _ngcontent-rkd-1="" >
+                                       April-2018
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                        </td>
+                                        <td _ngcontent-rkd-1="" nowrap="">                                            
+                                            <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                <span class="fa fa-ban" ></span> 
+                                            </button>
+                                            <button class="btn-action delete" type="button" title="Delete">
+                                                <span class="fa fa-trash" ></span> 
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    
+                                    
+                                    </tbody>
+                                </table>
+                                </div>
+                                <div>
+                                    <!-- <div>
+                                        Queue progress:
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                                        </div>
+                                    </div> -->
+                                    <div class="text-right">
+                                    <button class="btn btn-primary btn-s" type="button">
+                                        <span class="fa fa-upload"></span> Upload
+                                    </button>                                   
+                                    </div>
+                                </div>
+                          </div>              
+                        </div>                   
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Save</button>
+              <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+<!-- jQuery --> 
+<script src="../assets/libs/jquery/jquery.js"></script> 
+<script src="../assets/js/bootstrap/bootstrap.min.js"></script> 
+<script src="../assets/js/custom.js"></script>
+</body>
+</html>

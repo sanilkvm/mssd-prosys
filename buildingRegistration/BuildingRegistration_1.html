@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
+    <link href="../assets/css/style.css" rel="stylesheet">    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header fixed-brand tgl">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  id="menu-toggle">
+                      <span class="hamb-menu"><i class="hamb-icon"></i></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:;">PMS</a>        
+                </div><!-- navbar-header-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                         <button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> 
+                           <span class="hamb-menu" ><i class="hamb-icon"></i></span>
+                         </button>
+                        </li>
+                    </ul>                    
+                    <ul class="nav navbar-nav navbar-right hidden-xs right-nav"> 
+                      <li><a class="display-name">John Doe | AL Hilal </a></li>
+                      <li class="dropdown">
+                         <a href="javascript:;" class="user-icons dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle-o"></i><span class="caret"></span></a>
+                         <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="">Policy & Procedures</a></li> 
+                          <li><a href="">User Manual</a></li>                        
+                          <li><a href="">Request for Maintenance</a></li>
+                        </ul>
+                      </li>                      
+                      <li class="dropdown">                       
+                        <a href="javascript:;" class="dropdown-toggle user-icons" data-toggle="dropdown"><i class="fa fa-user-circle-o" ></i> 
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu animated fadeInUp" >                        
+                          <li><a href="../notification/notificationPreferences.html">Notification Preferences</a></li> 
+                          <li><a href="" data-toggle="modal" data-target="#changePassword">Change Password</a></li>                        
+                          <li><a href="../login/login.html">Logout</a></li>
+                        </ul>
+                      </li>               
+                    </ul>                    
+                </div><!-- /#navbar-header -->
+    </header>
+    <div id="wrapper" class="toggled-2">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper"> 
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu"> 
+               <!-- <li class="menu-search">
+                  <span class="ti-search"></span>
+                    <input type="text" class="search-input" placeholder="Search...">
+                </li>-->
+                <li><a href="../dashboard/dashboard.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-desktop"></i></span>Dashboard</a></li>
+                <li class="active"><a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-pencil-square-o" ></i></span>Building Registration</a>                </li>
+                <li><a href="../searchIncidentReport/searchIncidentReport.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text-o" ></i></span>Tenant Registration</a></li>
+                <li><a href="../searchCategory/searchCategory.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sliders" ></i></span>Tenant Linking</a></li>
+                                      
+                <li class="visible-xs">
+                    <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-circle-o" ></i></span>Profile</a>
+                </li>
+                <li class="visible-xs">
+                    <a href="javascript:;"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sign-out" ></i></span>Logout</a>
+                </li>     
+            </ul>
+        </div><!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="incidentReportPage animated fadeIn"> 
+             <div class="alert alert-success fix-top" >    
+                <strong>Success!</strong> You have successfully saved.
+            </div>
+             <h4 class="title">Building Registration</h4> 
+             <nav id="lftMenu">
+                <ul>
+                    <li><a href="#reportingType"><i class="fa fa-check-circle-o"></i><span class="tooltiptext right">Building Type</span></a></li>
+                    <li><a href="#incidentDetails"><i class="fa fa-file-text-o"></i><span class="tooltiptext right">Building Details</span></a></li>
+                    <li><a href="#attachments"><i class="fa fa-paperclip"></i><span class="tooltiptext right">Attachments</span></a></li>                    
+                </ul>
+             </nav>
+             <div class="inner-wrapper btm-mar">
+               <div class="row">
+                 <h5 class="sub-head" id="reportingType">Building Type</h5>
+                 <div class="col-md-8">
+                    <div class="row">
+                     <div class="col-md-3 col-sm-3 col-xs-6">
+                          <div class="form-inputs">    
+                              <input type="radio" id="Cinical" name="01">
+                              <label for="Cinical">compounded</label>  
+                               <span class="theme-tooltip">
+                                   <i class="fa fa-question-circle info-icon"></i>   
+                                    <span class="theme-tooltip-box right">An adverse event or occurrences that may cause an interruption in patient or staff safety or physical facility or routine health care operation. </span>
+                                </span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-6">
+                          <div class="form-inputs">    
+                              <input type="radio" id="Sentinel" name="01">
+                              <label for="Sentinel">Non-Compounded</label>                            
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-6">
+                          <div class="form-inputs">    
+                              <input type="radio" id="NearMiss" name="01">
+                              <label for="NearMiss">Villa</label>                            
+                          </div>
+                      </div>                      
+                   </div>                 
+                 </div>
+               </div>
+             </div>
+			 <div class="row">
+                      <h5 class="sub-head" id="incidentDetails">Building Details</h5>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <input type="text" required class="form-control">
+                            <span class="input-bar"></span>
+                            <label>Building Name</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <input type="text" required class="form-control">
+                            <span class="input-bar"></span>
+                            <label>Building Number</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <input type="text" required class="form-control">
+                            <span class="input-bar"></span>
+                            <label>Number Of Flats</label>
+                        </div>
+                      </div>                      
+                                                              
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <textarea required class="form-control" cols="5" rows="9"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Building Description</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="ui-input-group">        
+                            <textarea required class="form-control" cols="5" rows="9"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Building Address</label>
+                        </div>
+                      </div> 
+                      <div class="col-md-4 col-sm-4">
+                         <div class="block" id="participants">
+                           <h6>Tenants
+                           <button class="icon-btn pull-right addNewBtn" title="Add New" data-toggle="modal" data-target="#addParticipant" id="addParticipantBtn" data-backdrop="false"><i class="fa fa-user-plus"></i></button> 
+                           </h6>
+                           <ul class="list participantListView">
+                              <li>John Doe 1 &lt;Medical Officer In Charge&gt; 
+                                  <div class="action-btns">
+                                      <label for="C01" title="Must Reply"><input type="checkbox" id="C01" ><span class="fa fa-reply"></span></label>
+                                      <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+                                      <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+                                  </div>
+                               </li>
+                              <li>John Doe 2 &lt;Medical Orderly&gt; 
+                                  <div class="action-btns">
+                                      <label for="C01" title="Must Reply"><input type="checkbox" id="C01" ><span class="fa fa-reply"></span></label>
+                                      <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+                                      <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+                                  </div>
+                               </li>
+                              <li>John Doe 3 &lt;Head of Health Center&gt; 
+                                 <div class="action-btns">
+                                      <label for="C01" title="Must Reply"><input type="checkbox" id="C01" ><span class="fa fa-reply"></span></label>
+                                      <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+                                      <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+                                  </div>
+                               </li>
+                              <li>John Doe 4 &lt;Medical Record&gt; 
+                                  <div class="action-btns">
+                                      <label for="C01" title="Must Reply"><input type="checkbox" id="C01" ><span class="fa fa-reply"></span></label>
+                                      <button class="icon-btn"><i class="fa fa-check icon-red"></i></button>
+                                      <button class="icon-btn"><i class="fa fa-trash icon-red"></i></button>
+                                  </div>
+                           
+                           </ul>
+                         </div>
+                      </div>                                                                           
+                   </div>
+             
+                   <div class="row">
+                     <div class="col-md-6 col-sm-6">
+                        <div class="block search-add-list">
+                           <h6>Person Affected <button class="icon-btn pull-right addNewBtn" title="Add New"  data-toggle="modal" data-target="#addNewPerson" id="personAffectedBtn" data-backdrop="static"><i class="fa fa-user-plus"></i></button></h6>
+                           <div class="mar-10">
+                             <div class="row">
+                              <div class="col-md-4">
+                               <div class="ui-input-group">  
+                                <select class="select-sm form-control staffPatient">
+                                 <option value="staff">Staff</option>
+                                 <option value="patient">Patient</option>
+                                 <option value="other">Other</option>
+                                </select>
+                                <span class="input-bar"></span>   
+                                </div>
+                              </div>                              
+                              <div class="col-md-8 type-name">
+                                  <div class="ui-input-group">        
+                                    <input type="text" required class="form-control search" >  
+                                    <span class="input-bar"></span>                        
+                                    <label class="nameId" >Type Person Name</label>
+                                  </div>
+                              </div>
+                              <div class="col-md-8 ui-input-group other-content">
+                                  <div class="visitor-entry">
+                                       <div class="ui-input-group">        
+                                        <input type="text" required class="form-control" placeholder="Name" id="visitorName">  
+                                        <span class="input-bar"></span>                             
+                                       </div>
+                                       <div class="ui-input-group">        
+                                        <input type="text" required class="form-control" placeholder="Mobile" id="visitorMob">  
+                                        <span class="input-bar"></span>                             
+                                       </div>  <div class="ui-input-group">        
+                                        <input type="text" required class="form-control" placeholder="Remark" id="visitorRemark">  
+                                        <span class="input-bar"></span>                             
+                                       </div>
+                                       <div class="add-btn-cont">
+                                         <button class="icon-btn" id="addVisitor" title="Add"><i class="fa fa-plus-circle"></i></button>
+                                       </div>                               
+                                   </div>
+                              </div>
+                             </div>
+                           </div>
+                          <div class="results"></div>
+                          <ul class="addList searchList"></ul>
+                          <!--<ul class="addList" id="visitor-list"></ul>-->
+                         </div>                      
+                      </div> 
+                      <div class="col-md-6 col-sm-6">
+                        <div class="block search-add-list">
+                           <h6>Person Involved <button class="icon-btn pull-right addNewBtn" title="Add New"  data-toggle="modal" data-target="#addNewPerson" id="personInvolvedBtn" data-backdrop="static"><i class="fa fa-user-plus"></i></button></h6>
+                           <div class="mar-10">
+                             <div class="row">
+                              <div class="col-md-4">
+                               <div class="ui-input-group">  
+                                <select class="select-sm form-control staffPatient">
+                                 <option value="staff">Staff</option>
+                                 <option value="patient">Patient</option>
+                                 <option value="other">Other</option>
+                                </select>
+                                <span class="input-bar"></span>   
+                                </div>
+                              </div>
+                              <div class="col-md-8 type-name">
+                                  <div class="ui-input-group">        
+                                    <input type="text" required class="form-control search" >  
+                                    <span class="input-bar"></span>                        
+                                    <label class="nameId" >Type Person Name</label>
+                                  </div>
+                              </div>
+                              <div class="col-md-8 ui-input-group other-content">
+                                  <div class="visitor-entry">
+                                   <div class="ui-input-group">        
+                                    <input type="text" required class="form-control" placeholder="Name" id="visitorName">  
+                                    <span class="input-bar"></span>                             
+                                   </div>
+                                   <div class="ui-input-group">        
+                                    <input type="text" required class="form-control" placeholder="Mobile" id="visitorMob">  
+                                    <span class="input-bar"></span>                             
+                                   </div>  <div class="ui-input-group">        
+                                    <input type="text" required class="form-control" placeholder="Remark" id="visitorRemark">  
+                                    <span class="input-bar"></span>                             
+                                   </div>
+                                   <div class="add-btn-cont">
+                                     <button class="icon-btn" id="addVisitor" title="Add"><i class="fa fa-plus-circle"></i></button>
+                                   </div>                               
+                               </div>
+                              </div>
+                             </div>
+                           </div>
+                          <div class="results"></div>
+                          <ul class="addList searchList"></ul>
+                          <!--<ul class="" id="visitor-list"></ul>-->
+                         </div>                      
+                      </div>
+                   </div>
+             </div>
+             
+             
+              <!-- Attachments -->
+             <div class="inner-wrapper btm-mar">
+               <div class="row">
+                 <h5 class="sub-head" id="attachments">Attachments</h5>
+                 <div class="col-md-12">
+                   <div class="">
+                     <div class="upload-section">   
+                        <div class="row">                
+                            <div class="col-md-3">                
+                                <h3>Select files</h3>                
+                                <div class="well my-drop-zone" ng2filedrop="">
+                                    Drop files to upload                                
+                                </div>                           
+                                <input multiple type="file" class="inputfile" id="fileUpload">   
+                                <label for="fileUpload"><span class="btn btn-primary">Browse</span></label>
+                            </div>                
+                            <div class="col-md-9" style="margin-bottom: 40px">
+                                <h3>Upload queue</h3>
+                                <p>Queue length: 1</p>   
+                                <div class="upload-list">             
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th _ngcontent-rkd-1="" width="40%">Name</th>
+                                        <th _ngcontent-rkd-1="" width="40%">Description</th> 
+                                        <th _ngcontent-rkd-1="">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody _ngcontent-rkd-1="">
+                                    <!--template bindings={}-->
+                                    <tr _ngcontent-rkd-1="">
+                                        <td _ngcontent-rkd-1=""><strong _ngcontent-rkd-1="">Test1.doc</strong></td>
+                                        <!--template bindings={}-->
+                                        <!--template bindings={}-->
+                                        <td _ngcontent-rkd-1="" >
+                                        Sed pulvinar volutpat placerat. Quisque vitae luctus erat.
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                        </td>
+                                        <td _ngcontent-rkd-1="" nowrap="">                                            
+                                            <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                <span class="fa fa-ban" ></span> 
+                                            </button>
+                                            <button class="btn-action delete" type="button" title="Delete">
+                                                <span class="fa fa-trash" ></span> 
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><strong _ngcontent-rkd-1="">Test2.doc</strong></td>
+                                        <!--template bindings={}-->
+                                        <!--template bindings={}-->
+                                        <td>
+                                             Quisque vitae luctus erat.
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                            <!--template bindings={}-->
+                                        </td>
+                                        <td nowrap="">                                            
+                                            <button class="btn-action cancel" type="button" disabled="" title="Cancel">
+                                                <span class="fa fa-ban" ></span> 
+                                            </button>
+                                            <button class="btn-action delete" type="button" title="Delete">
+                                                <span class="fa fa-trash" ></span> 
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                <div>
+                                    <div>
+                                        Queue progress:
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                    <button class="btn btn-primary btn-s" type="button">
+                                        <span class="fa fa-upload"></span> Upload
+                                    </button>                                   
+                                    </div>
+                                </div>
+                          </div>              
+                        </div>    
+                    </div>    
+                 </div>                    
+                            
+                 </div>
+               </div>
+             </div>            
+             <div class="ftr-btn row ">
+                 <div class="col-md-9 col-sm-9 pull-right fixed-ftr">
+                    <div class="inner-wrapper">
+                        <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                        <button class="btn btn-primary ripple" type="button">Save</button>
+                                        <button class="btn btn-primary ripple" type="reset"> Clear</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->  
+        
+         <!-- Add New staff/patient Modal -->
+              <div class="modal fade" id="addNewPerson" role="dialog">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Add Person</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="addNewbox"> 
+                          <div class="row">
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group btm-mar">        
+                                    <select class="form-control" id="SelectPerson">
+                                       <option selected value="staff">Staff</option>
+                                       <option value="patient">Patient</option>
+                                    </select>                                   
+                                    <span class="input-bar"></span> 
+                                    <label class="control-label">Person Type</label>
+                                </div>
+                             </div>
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <select class="form-control">
+                                       <option disabled selected>Dept</option>
+                                    </select>                                   
+                                    <span class="input-bar"></span> 
+                                </div>
+                             </div>
+                             <div class="col-md-4 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <input type="text" required class="form-control" id="searchPersonInput">  
+                                    <span class="input-bar"></span>
+                                    <label class="nameId">Enter Staff </label> 
+                               </div>
+                             </div>
+                             <div class="col-md-2 mar-tb-10">
+                               <button class="btn btn-primary btn-sm  ripple" id="searchPerson">Search</button>
+                             </div>
+                             <div class="col-md-12">
+                              <ul class="show-result"></ul>
+                             </div>
+                             </div>
+                          </div>                   
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary ripple" id="addPersonbtn" data-dismiss="modal">Add</button>
+                      <button class="btn btn-default ripple"  data-dismiss="modal" id="CloseAddPerson">Close</button>                    
+                    </div>
+                  </div>
+                </div>
+              </div> 
+      <!-- Add Participants -->
+              <div class="modal fade" id="addParticipant" role="dialog">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Add Participant</h4>
+                    </div>
+                    <div class="modal-body min-ht">
+                      <div class="addNewbox"> 
+                          <div class="row">
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group btm-mar">        
+                                    <select class="form-control" id="SelectParticipant">
+                                       <option>Hospital 1</option>
+                                       <option>Hospital 2</option>
+                                       <option>Hospital 3</option>
+                                    </select>                                   
+                                    <span class="input-bar"></span> 
+                                    <label class="control-label">Institution</label>
+                                </div>
+                             </div>
+                             <div class="col-md-3 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <input type="text" required class="form-control">  
+                                    <span class="input-bar"></span>
+                                    <label class="nameId">Dept</label> 
+                               </div>
+                             </div>
+                             <div class="col-md-4 col-sm-4">
+                              <div class="ui-input-group">        
+                                    <input type="text" required class="form-control" id="searchParticipant">  
+                                    <span class="input-bar"></span>
+                                    <label class="nameId">Enter Staff </label> 
+                               </div>
+                               <div class="showParticipants"></div>
+                             </div>
+                             <div class="col-md-2 mar-tb-10">
+                               <button class="btn btn-primary btn-sm  ripple" id="searchParticipantBtn">Search</button>
+                             </div>
+                             <div class="col-md-12">
+                              <ul class="participantsList"></ul>
+                             </div>
+                             </div>
+                          </div>                   
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary ripple" id="addNewParticipant" data-dismiss="modal">Add</button>
+                      <button class="btn btn-default ripple"  data-dismiss="modal" >Close</button>                    
+                    </div>
+                  </div>
+                </div>
+              </div> 
+        
+        
+        
+        <!-- Omani code -->
+        <div id="omaniCodeModal" class="modal fade" role="dialog" >
+          <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">                
+                <div class="row">
+                     <div class="col-md-6"><h4 class="text-center">What does the Code say?</h4></div>
+                     <div class="col-md-5">
+                         <h4 class="text-center">ماذا تقول المدونة؟</h4>  
+                    </div>
+                    <div class="col-md-1"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="row omani-code">
+                    <div class="col-md-6 col-sm-6">  
+                        <div class="devider-right">
+                        <ul>
+                            <li>Breast milk substitutes and utensils used in feeding should comply with standards applicable in Sultanate of Oman and importation of whatever contravenes to such standards shall be prohibited</li>
+                            <li>No advertising of breastmilk substitutes and other products(Bottles and Teats) to the public </li>
+                            <li>No free samples to mothers and pregnants women</li>
+                            <li>No promotion in the health services</li>
+                            <li>No donations of free or subsidized supplies of Breast milk Substitute (BMS) or other products (Bottles and Teats) in any part of the health care system </li>
+                            <li>No company personnel to contact or advise mothers</li>
+                            <li>No gifts or personal samples to health workers</li>
+                            <li>No pictures of infant, or text idealizing artificial feeding, on the labels of the milk products</li>
+                            <li>Information to physician should only be scientific and factual</li>
+                            <li>Information on artificial feeding should explain the benefits of BF and the costs and dangers associated with artificial feeding</li>
+                            <li>Unsuitable products, such as sweetened condensed milk is prohibited</li>
+                            <li>Disclose any contribution made by a manufacturers or distributor for fellowships and workshops</li>
+                        </ul> 
+                       </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 dir-rtl">  
+                      <div >
+                        <ul class="text-md">
+                            <li>يجب أن تكون بدائل لبن الأم والأدوات المستخدمة في الإرضاع مطابقة للمواصفات القياسية المعمول بها في السلطنة ويحظر دخول ما يخالفها.</li>
+                            <li>عدم الإعلان عن بدائل لبن الأم والمنتجات الأخرى (زجاجات الارضاع والمصاصات) للجمهور</li>
+                            <li>عدم توزيع عينات مجانية للأمهات والنساء الحوامل</li>
+                            <li>عدم الترويج في المؤسسات الصحية الحكومية والخاصة</li>
+                            <li>يمنع  التبرعات أو البيع بأسعار منخفضة للمؤسسات الصحية والإمدادات من قبل المنظمات لحليب الأطفال أو المنتجات الأخرى (الزجاجات والمصاصات)</li>
+                            <li>لا يجوز لموظفي الشركة الاتصال بالأمهات او تقديم المشورة لهن</li>
+                            <li>لا يجوز توزيع  ھدایا أو عینات شخصیة للعاملین الصحیین</li>
+                            <li>يمنع في جميع الأحوال أن تتضمن مواد الإعلان أو الدعاية أية صورة أو نص يوحي بمثالية أو أفضلية بدائل لبن الأم على الرضاعة الطبيعية.</li>
+                            <li>يجب أن تكون المعلومات المعطاة إلى الطبيب علمية وحقيقية</li>
+                            <li>في حالة اعطاء المعلومات عن التغذية الصناعية  للأطباء يجب التأكيد على فوائد الرضاعة الطبيعية والتكاليف والمخاطر المرتبطة بالتغذية الصناعية</li>
+                            <li>يمنع توزيع المنتجات الغير المناسبة، مثل الحليب المحلى المكثف</li>
+                            <li>ينبغي الافصاح عن أي مساهمة تقدمها شركة الحليب للابتعاث لدراسة او ورش العمل</li>
+                        </ul>    
+                        </div>
+                    </div>
+                    
+                </div>
+              </div>              
+            </div>
+
+          </div>
+        </div>
+        
+        
+        
+        <!-- Change pasword -->
+        <div id="changePassword" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Change Password</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                     <div class="ui-input-group">
+                         <input type="text" class="form-control">
+                         <span class="input-bar"></span>
+                         <label>Password</label>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="ui-input-group">
+                         <input type="text" class="form-control">
+                         <span class="input-bar"></span>
+                         <label>New Password</label>
+                     </div>
+                  </div>   
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary ripple" data-dismiss="modal">Save</button>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+        
+        
+    </div>
+
+    <!-- jQuery -->
+    <script src="../assets/libs/jquery/jquery.js"></script>
+    <script src="../assets/libs/scrollTo/jquery.scrollto.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="../assets/js/custom.js"></script>  
+</body>
+</html>

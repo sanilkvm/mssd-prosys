@@ -1,0 +1,415 @@
+<!-- Action Plan Modal-->
+<div class="modal fade in" id="actionPlan" role="dialog" >
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">                
+      <div class="row">
+           <div class="col-md-6"><h4 class="modal-title">Action Plan</h4></div>
+           <div class="col-md-5">
+          </div>
+          <div class="col-md-1"><button class="close" data-dismiss="modal" type="button">×</button></div>
+      </div>
+    </div>
+    <div class="modal-body">
+    <div class="btm-mar">
+        <div class="inner-wrapper btm-mar "> 
+         <div class="row">
+            <h5 class="sub-head" id="reportingType">Incident Details</h5>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Incident Ref:</label>
+                            <span class="col-md-6">HOSP8029468</span>
+                        </div>
+                    </div>                    
+                    <div class="col-md-3 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Classification:</label>
+                            <span class="col-md-6">Near Miss</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Incident Date/Time:</label>
+                            <span class="col-md-6">Feb 26, 2018 2:39 PM</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                            <div class="show-data row">
+                                <label class="control-label col-md-4">Institute:</label>
+                                <span class="col-md-8">Hospital</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="show-data row ng-star-inserted">
+                                <label class="control-label col-md-4">Category:</label>
+                                <span class="col-md-8">Falls </span>
+                            </div>
+                        </div>
+                    <div class="col-md-4 ng-star-inserted">
+                        <div class="show-data row">
+                            <label class="control-label col-md-6">Department:</label>
+                            <span class="col-md-6">NEUROLOGY</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <!----><div class="row ng-star-inserted">
+                            <label class="control-label col-md-2">Description:</label>
+                            <div class="saved-data lg-txt col-md-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="ui-input-group no-mar-btm">                            
+                            <span><strong>Initial Risk Ranking:</strong>
+                                <span class="risk-status">
+                                    <span class="ng-star-inserted">N/A</span> 
+                                </span>
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>          
+    </div> 
+    </div> 
+    <div class="inner-wrapper add-action-plan btm-mar ">               
+            <div class="row">
+              <h5 class="sub-head" id="actionPlan">Action Plan</h5>
+               <div class="col-md-4">
+                 <div class="ui-input-group">
+                  <input class="form-control ng-untouched ng-pristine ng-valid" type="text">
+                  <span class="input-bar"></span>
+                  <label class="control-label">Corrective Action Plan <span class="mandatory">*</span></label>
+                  <!---->
+                </div>  
+            </div>
+            <div class="col-md-8">
+                 <div class="ui-input-group">
+                     <input class="form-control ng-untouched ng-pristine ng-valid" type="text" placeholder="Type first 3 characters to select a staff">  
+                  <span class="input-bar"></span>
+                  <label class="control-label">Responsible Person <span class="mandatory">*</span></label>
+                  <!---->
+                </div>                  
+            </div>                           
+            
+            <div class="col-md-4">
+                 <div class="ui-input-group">
+                  <select class="form-control ng-pristine ng-valid ng-touched">
+                   <option value="0">New</option>
+                   <option value="1">In Progress</option>  
+                   <option value="2">Done</option>                     
+                </select>
+                <label class="control-label">Status</label>
+                <span class="input-bar"></span> 
+                </div>                  
+            </div>
+            <div class="col-md-4">
+                <div class="ui-input-group">
+                 <div class="row">
+                   <div class="col-md-5">
+                     <input onlynumber="true" class="form-control ng-pristine ng-valid ng-touched" type="number">
+                   </div>
+                   <div class="col-md-1 text-center">:</div>
+                   <div class="col-md-5">
+                     <select class="form-control ng-pristine ng-valid ng-touched">
+                       <option value="H">Hours</option>  
+                       <option value="D">Days</option>  
+                       <option value="W">Weeks</option> 
+                       <option value="M">Months</option>  
+                       <option value="Y">Year</option>                                            
+                     </select>
+                   </div>
+                 </div> 
+                 <span class="input-bar"></span>
+                 <label class="control-label">Time Frame <span class="mandatory">*</span></label>
+                 <!---->
+               </div>                  
+           </div> 
+            <div class="col-md-4">
+                 <div class="ui-input-group">
+                        
+                  <span class="input-bar"></span>
+                  <label class="control-label">Follow Up By</label>
+                </div>                  
+            </div>
+         </div>  
+        </div>   
+        <div class="inner-wrapper text-right mar-btm">
+                 <button class="btn btn-primary" id="saveIncident">Save</button>
+                 <button class="btn btn-primary">Reset</button>
+                 <button class="btn btn-primary fa fa-print"></button>
+        </div>  
+    <div class="mar-top btm-mar">                         
+       <div class="table">    
+        <div class="table-row">
+          <div class="table-head">Corrective Action Plan</div>
+          <div class="table-head">Responsible Person</div>
+          <div class="table-head">Time Frame</div>
+          <div class="table-head">Status</div>
+          <div class="table-head">Follow Up</div>                              
+        </div>
+        <div class="table-row" >
+          <div class="table-cell">&nbsp;</div>
+          <div class="table-cell"></div>
+          <div class="table-cell"></div>
+          <div class="table-cell"></div>
+          <div class="table-cell"></div>                             
+        </div>        
+      </div>
+    </div>   
+   
+    <div class="inner-wrapper btm-mar">               
+        <!----><div class="row ng-star-inserted">
+             <h5 class="sub-head" id="actionPlan">Current Risk Ranking</h5>   
+            <div class="col-md-12">                
+                    <div class="row">                        
+                        <div class="col-md-3">
+                            <!----><div class="ui-input-group ng-star-inserted">
+                                <select class="form-control ng-untouched ng-pristine ng-valid">
+                                        <option selected="" value="0: null">--Select--</option>
+                                        <option value="1: 1">Insignificant</option>
+                                        <option value="2: 2">Minor</option>
+                                        <option value="3: 3">Moderate</option>
+                                        <option value="4: 4">Major</option>
+                                        <option value="5: 5">Catastrophic</option>
+                                </select>
+                                <label class="control-label">Consequences</label>
+                                <span class="input-bar"></span>
+                               <!---->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <!----><div class="ui-input-group ng-star-inserted">
+                                <select class="form-control ng-untouched ng-pristine ng-valid">
+                                        <option selected="" value="0: null">--Select--</option>
+                                        <option value="1: 1">Rare</option>
+                                        <option value="2: 2">Unlikely</option>
+                                        <option value="3: 3">Possible</option>
+                                        <option value="4: 4">Likely</option>
+                                        <option value="5: 5">Certain</option>
+                                </select>
+                                <label class="control-label">Likelihood</label>
+                                <span class="input-bar"></span>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <!---->
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary btn-sm ripple btn-mar-top">Save</button>
+                        </div>
+                    </div>                
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+    </div>
+  </div> 
+ </div>   
+ </div>  
+                 
+ <!-- Safety Alert Modal-->     
+ <div class="modal fade" id="safetyAlert" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Safety Alert & Lesson Learnt</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                 <div class="col-md-4">
+                      <div class="show-data row"> 
+                          <label class="control-label col-md-6">Incident No:</label>
+                          <span class="col-md-6">dsfdsf</span>
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="show-data row">
+                          <label class="control-label col-md-6">Date of Incident:</label>
+                          <span class="col-md-6">12/10/2017</span>
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="show-data row">
+                        <label class="control-label col-md-6">Category:</label>   
+                        <span class="col-md-6">Others - Organisation</span>                    
+                    </div>
+                  </div>   
+                  <div class="col-md-12">
+                      <div class="row">   
+                        <label class="control-label col-md-12">Event Description:</label>     
+                        <div class="col-md-12">
+                           <div class="saved-data lg-txt">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</div>
+                        </div>
+                    </div>
+                  </div>                          
+                  <div class="col-md-12">
+                      <div class="ui-input-group">        
+                            <textarea required="" class="form-control" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Preventive/Corrective Action to Be Taken:</label>
+                        </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="ui-input-group">        
+                            <textarea required="" class="form-control" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="textarea-label">Lesson Learnt</label>
+                        </div>
+                  </div>
+             </div>                  
+            </div>                   
+          </div>
+        </div>
+      </div>
+                 
+<!-- RCA Modal-->                  
+<div class="modal fade in" id="RCAmodal" role="dialog">
+<div class="modal-dialog modal-lg">
+
+  <div class="modal-content">
+    <div class="modal-header">                
+      <div class="row">
+           <div class="col-md-6"><h4 class="modal-title">Root Cause Analysis</h4></div>
+           <div class="col-md-5">
+          </div>
+          <div class="col-md-1"><button class="close" data-dismiss="modal" type="button">×</button></div>
+      </div>
+    </div>
+ <div class="modal-body">
+<div>    
+    <div class="inner-wrapper btm-mar">
+        <div class="row">
+            <h5 class="sub-head" id="reportingType">Incident Details</h5>
+            <div class="col-md-12">
+                <div class="row">
+                    <!----><div class="col-md-6 ng-star-inserted">
+                        <div class="ui-input-group">
+                            <label class="control-label">Incident Ref:</label>
+                            <div class="saved-data"><span>HOSP1723059</span></div>
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="ui-input-group">
+                            <div class="saved-data"><span>Hospital</span></div>
+                            <label class="control-label">Institute</label>
+                        </div>
+                    </div> 
+                    <!----><div class="col-md-6 ng-star-inserted">
+                        <div class="ui-input-group">
+                            <div class="saved-data lg-txt">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                            <label class="control-label label-top">Description</label>
+                        </div>
+                    </div>
+                    <!----><div class="col-md-6 ng-star-inserted">
+                        <div class="ui-input-group">
+                            <div class="saved-data">Aug 21, 2017 12:24 PM</div>
+                            <label class="control-label">When</label>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="block search-add-list active">
+                            <h6>Investigated Team Members</h6>
+                            <div class="mar-10">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ui-input-group">
+                                            <div>
+                                                <input class="form-control ng-untouched ng-pristine ng-valid" type="text">
+                                                <span class="input-bar"></span>
+                                            </div>
+                                            <div>
+                                                
+                                                <span class="input-bar"></span>
+                                                <label class="control-label">Type Staff Number / Name</label>
+                                                <div class="results" style="display: none;"></div>
+                                                <ul class="addList searchList">
+                                                    <!---->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inner-wrapper btm-mar">
+        <div class="row">                       
+        <h5 class="sub-head">Root Cause Analysis</h5>
+        <div class="col-md-6">
+                <div class="ui-input-group">
+                    <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                    <span class="input-bar"></span>
+                    <label class="control-label" style="white-space:inherit">What areas/services were impacted</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ui-input-group">
+                    <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                    <span class="input-bar"></span>
+                    <label class="control-label" style="white-space:inherit">Identify risk point and their contribution to the event</label>
+                </div>
+            </div>                        
+        </div>
+    </div>
+    <div class="inner-wrapper btm-mar bg-info">
+        <div class="row">
+            <h5 class="sub-head" id="reportingType">Background Information</h5>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6 co-sm-12">
+                        <div class="ui-input-group" style="padding-top:15px;">
+                            <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="control-label" style="white-space:inherit">What sequence of event should have taken place</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 co-sm-12">
+                        <div class="ui-input-group"  style="padding-top:15px;">
+                            <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="control-label" style="white-space:inherit">What deviation from the expected sequence may have led orcontributed to the event</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 co-sm-12">
+                        <div class="ui-input-group"  style="padding-top:15px;">
+                            <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="control-label" style="white-space:inherit">Did a malfunction, or an absence of equipment appear to have contributed to the event</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 co-sm-12">
+                        <div class="ui-input-group"  style="padding-top:15px;">
+                            <textarea class="form-control ng-untouched ng-pristine ng-valid" cols="5" rows="5"></textarea>
+                            <span class="input-bar"></span>
+                            <label class="control-label" style="white-space:inherit">Was the procedure involved carried out in an appropriate location?</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inner-wrapper text-right">
+        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary">Reset</button>
+    </div>
+
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
