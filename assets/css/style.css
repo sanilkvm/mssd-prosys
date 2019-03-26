@@ -27,8 +27,9 @@ ul {
 /*===========  login ==============*/
 
 .login-bg{
-	background:url(../img/bg.jpg) 0 0 no-repeat;
+	background:url(../img/Fotoram.io.jpg) 0 0 no-repeat;
 	background-size:cover;
+	
 	height:100%;
 }
 .login-container {
@@ -38,7 +39,7 @@ ul {
 }
 .login-box {
 	width: 100%;
-	background: rgba(39,54,85,1);
+	background: rgb(6, 41, 115);
 	padding: 30px;	
 	border-radius:5px;
 }
